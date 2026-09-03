@@ -1,0 +1,8 @@
+Step 11D leakage safety report
+================================
+- Synthetic sessions are generated from empirical real-session distributions only.
+- No test target load is used to create exact charging schedules or session labels.
+- Forecast/hourly load is used only for site-level demand scaling and coverage planning, not to reconstruct hidden real sessions.
+- Every synthetic row is labeled session_source=synthetic_empirical and scenario_type=synthetic_multisite_scenario.
+- Original 02_scheduling_ready_sessions.csv is not overwritten.
+- The combined output is a scenario file for robustness analysis, not a real-data replacement.

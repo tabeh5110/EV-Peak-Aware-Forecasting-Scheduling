@@ -1,0 +1,2 @@
+best_strategy_by_peak_reduction,best_strategy_by_capacity_violations,best_strategy_by_energy_service,recommended_strategy_for_paper,claim_strength,reason,warning_notes
+valley_filling,valley_filling,hybrid_uncertainty_peak,hybrid_uncertainty_peak,strong scenario evidence,uncertainty-aware scheduling works across most sites and capacity scenarios with low unserved energy,Synthetic sessions are scenario data only; do not claim real six-site session-log validation.

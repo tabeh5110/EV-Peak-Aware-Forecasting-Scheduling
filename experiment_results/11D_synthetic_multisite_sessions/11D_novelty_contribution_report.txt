@@ -1,0 +1,12 @@
+Step 11D novelty contribution report
+=====================================
+Step 11D adds a transparent multi-site scenario generator to address the session-data limitation discovered in Step 11/11B.
+
+Contribution elements:
+- Real session scheduling limitation is acknowledged rather than hidden.
+- Forecast-only sites receive synthetic empirical session demand for scalability testing.
+- Synthetic demand preserves observed arrival, dwell-time, energy, weekday/weekend, and session-count patterns.
+- Site demand is scaled using hourly load profiles.
+- Feasibility adjustments are recorded and synthetic sessions are explicitly labeled.
+
+This supports robustness analysis, but it is not a substitute for real multi-site session validation.

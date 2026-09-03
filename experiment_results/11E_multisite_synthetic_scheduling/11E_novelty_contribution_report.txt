@@ -1,0 +1,11 @@
+Step 11E novelty contribution report
+=====================================
+This step tests the scalability of forecast-informed EV charging scheduling using the empirical synthetic multi-site scenario from Step 11D.
+
+Contribution elements:
+- Multi-site scheduling across all Step 10 forecast sites.
+- Explicit separation of real and synthetic empirical sessions.
+- Uncertainty-aware and hybrid uncertainty/peak scheduling.
+- Realistic session constraints and site capacity assumptions.
+- Feasibility reporting for energy service, unserved energy, and capacity violations.
+- Honest scenario-based validation rather than overstated real-data validation.

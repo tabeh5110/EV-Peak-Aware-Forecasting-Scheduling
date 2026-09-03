@@ -1,0 +1,8 @@
+Step 11E leakage safety report
+================================
+- Step 10 forecasts are used only as scheduling signals.
+- actual_load_kw is not used to decide scheduling allocations.
+- Synthetic sessions were generated and labeled before scheduling.
+- Test labels are not used for strategy design or tuning.
+- Energy delivery, capacity violations, and peak reductions are evaluated only after schedules are produced.
+- Outputs preserve session_source and scenario_type so synthetic sessions are never confused with real logs.

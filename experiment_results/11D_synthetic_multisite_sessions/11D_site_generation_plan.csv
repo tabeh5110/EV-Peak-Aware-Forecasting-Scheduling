@@ -1,0 +1,7 @@
+site_id,has_real_sessions,has_hourly_load,has_forecast,needs_synthetic_sessions,target_number_synthetic_sessions,scaling_factor,notes
+Arroyo_Garage_01,False,True,True,True,2666,1.6540053161207982,synthetic site
+California_Garage_01,True,True,True,False,0,1.0,mapped real-session site
+California_Garage_02,False,True,True,True,6629,0.9369433290467926,synthetic site
+N_Wilson_Garage_01,False,True,True,True,3839,1.0900954674685024,synthetic site
+Parking_Lot_01,False,True,True,True,852,0.1439387201762586,synthetic site
+S_Wilson_Garage_01,False,True,True,True,1126,0.19141747652491145,synthetic site

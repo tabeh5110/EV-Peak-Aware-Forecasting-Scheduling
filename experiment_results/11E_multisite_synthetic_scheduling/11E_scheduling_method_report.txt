@@ -1,0 +1,19 @@
+Step 11E multisite synthetic scheduling method report
+=================================================
+Purpose:
+Evaluate constrained EV charging scheduling across all six Step 10 forecast sites using the Step 11D real plus synthetic scenario file.
+
+Real and synthetic distinction:
+The scenario includes 9079 calendar-aligned real empirical sessions and 12256 synthetic_empirical sessions. Synthetic sessions are not real logs. They are labeled with session_source=synthetic_empirical and scenario_type=synthetic_multisite_scenario.
+
+Scheduling constraints:
+Charging is assigned only between arrival_time and departure_time. Hourly charging power is capped by max_charging_power_kw. The scheduler attempts to deliver all requested energy and records unserved energy and capacity violations.
+
+Strategies:
+uncontrolled, valley_filling, point_forecast, peak_sensitive, uncertainty_aware, and hybrid_uncertainty_peak.
+
+Capacity assumptions:
+Three site-specific capacity scenarios are evaluated: capacity_p95, capacity_p95_plus_10percent, and capacity_mean_plus_2std. Capacities are computed from reconstructed uncontrolled scenario load.
+
+Interpretation:
+This is robustness/scalability analysis for a synthetic multi-site scenario, not real six-site validation.

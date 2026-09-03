@@ -1,0 +1,46 @@
+Step 12 final paper results pack report
+========================================
+Input files found: 32
+Input files missing: 0
+Missing files:
+- none
+
+Tables created:
+- 12_table1_dataset_summary.csv
+- 12_table2_site_summary.csv
+- 12_table3_feature_engineering_summary.csv
+- 12_table4_forecasting_model_comparison.csv
+- 12_table5_statistical_validation_summary.csv
+- 12_table6_prediction_interval_summary.csv
+- 12_table7_real_session_scheduling_summary.csv
+- 12_table8_synthetic_multisite_scheduling_summary.csv
+- 12_table9_ablation_summary.csv
+
+Figures copied/created: 8
+
+Final accepted model decision:
+Main forecasting model: E-AHPA
+Peak operational variant: PRC-E-AHPA
+Claim strength: strong overall, cautious peak
+
+Final accepted scheduling decision:
+Recommended scheduling strategy for paper: hybrid_uncertainty_peak
+Scheduling claim strength: strong scenario evidence
+Warning: Synthetic sessions are scenario data only; do not claim real six-site session-log validation.
+
+Main strengths:
+- End-to-end leakage-free forecasting-to-scheduling pipeline.
+- Statistically supported overall MAE improvement for E-AHPA.
+- Peak-risk calibrated PRC-E-AHPA variant for operational sensitivity.
+- Prediction intervals reduce upper-bound underestimation risk for scheduling.
+- Scheduling evaluation reports feasibility, energy service, and capacity violations.
+
+Main limitations:
+- Peak superiority must be worded cautiously.
+- Prediction interval coverage is below nominal.
+- Real session scheduling is limited to a calendar-aligned site case study.
+- Synthetic multi-site scheduling is scenario evidence, not real six-site validation.
+- Greedy scheduling is transparent but not globally optimal.
+
+Next step:
+Use the generated manuscript files as the foundation for drafting the final paper.

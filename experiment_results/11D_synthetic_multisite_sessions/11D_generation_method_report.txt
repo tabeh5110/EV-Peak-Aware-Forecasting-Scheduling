@@ -1,0 +1,19 @@
+Step 11D synthetic multi-site generation method report
+====================================================
+Why synthetic sessions were needed:
+Step 11 real session scheduling was limited because complete session-level demand was available for one usable raw site, while Step 10 forecasts exist for 6 sites. To test scheduling scalability across forecast sites, this step creates clearly labeled synthetic session demand for forecast-only sites.
+
+Real session limitation:
+The raw session file contains 12601 cleaned real sessions from raw site labels ['2']. The real sessions were calendar-aligned to the forecast-supported site(s) ['California_Garage_01'] for scenario analysis, following the Step 11 limitation.
+
+Empirical distribution method:
+Synthetic sessions are sampled from empirical real-session distributions: arrival hour, weekday/weekend timing, arrival minute, dwell duration, requested energy, and sessions per day. The random_state is fixed at 42.
+
+Site scaling method:
+For each forecast site without real session logs, the target session count is scaled using a blended load ratio: 0.7 times the mean hourly load ratio plus 0.3 times the p95 hourly load ratio relative to the real-session reference site. Reasonable minimum and maximum limits are applied.
+
+Feasibility checks:
+Each synthetic session has positive energy, positive dwell time, a 6.6 kW default charger power, and energy no greater than max_charging_power_kw times dwell_hours. Infeasible samples are adjusted by increasing dwell time or capping energy, and all adjustments are saved.
+
+Important interpretation:
+Synthetic sessions are scenario data for robustness and scalability analysis. They are not real logs and must not be presented as real six-site session validation.

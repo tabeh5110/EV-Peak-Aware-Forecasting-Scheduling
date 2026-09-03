@@ -1,0 +1,26 @@
+{
+  "real_session_sites": [
+    "2"
+  ],
+  "forecast_sites": [
+    "Arroyo_Garage_01",
+    "California_Garage_01",
+    "California_Garage_02",
+    "N_Wilson_Garage_01",
+    "Parking_Lot_01",
+    "S_Wilson_Garage_01"
+  ],
+  "synthetic_sites": [
+    "Arroyo_Garage_01",
+    "California_Garage_02",
+    "N_Wilson_Garage_01",
+    "Parking_Lot_01",
+    "S_Wilson_Garage_01"
+  ],
+  "real_sessions": 9079,
+  "synthetic_sessions": 15194,
+  "combined_sessions": 24273,
+  "total_real_energy": 79342.95940747308,
+  "total_synthetic_energy": 127143.70487509521,
+  "adjustments": 2695
+}

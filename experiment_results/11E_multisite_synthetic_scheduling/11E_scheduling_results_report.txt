@@ -1,0 +1,31 @@
+Step 11E multisite synthetic scheduling results report
+==================================================
+Sites scheduled: 6
+Real sessions used: 9079
+Synthetic sessions used: 12256
+Total sessions: 21335
+Main capacity scenario: capacity_p95_plus_10percent
+
+Main scenario energy service:
+Recommended strategy: hybrid_uncertainty_peak
+Uncertainty-aware requested energy: 172927.12 kWh
+Uncertainty-aware delivered energy: 172926.06 kWh
+Uncertainty-aware unserved energy: 1.06 kWh (0.001%)
+
+Peak and capacity:
+Uncontrolled peak load: 558.36 kW
+Uncertainty-aware peak load: 367.45 kW
+Uncertainty-aware peak reduction: 34.19%
+Uncontrolled capacity violation hours: 484
+Uncertainty-aware capacity violation hours: 8
+
+Best strategies:
+Best by peak reduction: valley_filling (55.69%)
+Best by capacity violations: valley_filling (0 hours)
+Best by energy service: hybrid_uncertainty_peak
+
+Site-level robustness:
+Uncertainty-aware scheduling achieved positive peak reduction and <=1% unserved energy on 6 of 6 sites in the main scenario.
+
+Limitations:
+This scenario includes synthetic sessions for forecast-only sites. It evaluates scalability and robustness but must not be described as real six-site session-log validation.

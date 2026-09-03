@@ -1,0 +1,12 @@
+{
+  "sites": 6,
+  "real_sessions": 9079,
+  "synthetic_sessions": 12256,
+  "total_sessions": 21335,
+  "best_peak": "valley_filling",
+  "best_capacity": "valley_filling",
+  "ua_peak_reduction": 34.19251186298704,
+  "ua_capacity_reduction": 476.0,
+  "ua_unserved": 0.0006127822166227411,
+  "claim": "strong scenario evidence"
+}

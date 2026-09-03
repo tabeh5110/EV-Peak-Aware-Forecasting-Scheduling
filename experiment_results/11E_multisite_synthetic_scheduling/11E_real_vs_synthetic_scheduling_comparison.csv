@@ -1,0 +1,17 @@
+scenario,strategy,peak_reduction_percent,capacity_violation_hours,unserved_energy_percent
+Step 11 real/calendar-aligned one-site,peak_sensitive,41.83989823386172,5.0,0.039955740270817
+Step 11 real/calendar-aligned one-site,point_forecast,41.83989823386172,5.0,0.039955740270817
+Step 11 real/calendar-aligned one-site,uncertainty_aware,41.83989823386172,5.0,0.039955740270817
+Step 11 real/calendar-aligned one-site,uncontrolled,0.0,169.0,0.0399557402708171
+Step 11 real/calendar-aligned one-site,valley_filling,51.31650442765884,0.0,0.0399557402708171
+Step 11B robustness mean,peak_sensitive,42.79504362917124,16.91111111111111,0.05587430710710332
+Step 11B robustness mean,point_forecast,42.79504362917124,16.91111111111111,0.05587430710710332
+Step 11B robustness mean,uncertainty_aware,42.79504362917124,16.91111111111111,0.05587430710710332
+Step 11B robustness mean,uncontrolled,0.0,123.68888888888888,0.05587430710710335
+Step 11B robustness mean,valley_filling,57.859648667811236,8.666666666666666,0.05587430710710334
+Step 11E synthetic multi-site main,hybrid_uncertainty_peak,34.19251186298704,8.0,0.0006127822166227411
+Step 11E synthetic multi-site main,peak_sensitive,34.19251186298704,8.0,0.0006127822166227411
+Step 11E synthetic multi-site main,point_forecast,34.19251186298704,8.0,0.0006127822166227411
+Step 11E synthetic multi-site main,uncertainty_aware,34.19251186298704,8.0,0.0006127822166227411
+Step 11E synthetic multi-site main,uncontrolled,0.0,484.0,0.02098783910915973
+Step 11E synthetic multi-site main,valley_filling,55.68565885624446,0.0,0.0006127822166227411

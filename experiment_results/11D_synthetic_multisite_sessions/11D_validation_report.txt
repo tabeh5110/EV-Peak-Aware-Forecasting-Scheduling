@@ -1,0 +1,22 @@
+Step 11D synthetic session validation report
+============================================
+Real cleaned sessions used for empirical distributions: 12601
+Calendar-aligned real sessions included in scenario file: 9079
+Synthetic sessions generated: 15194
+Combined real plus synthetic sessions: 24273
+Forecast sites covered: 6
+Synthetic sites generated: Arroyo_Garage_01, California_Garage_02, N_Wilson_Garage_01, Parking_Lot_01, S_Wilson_Garage_01
+
+Requested energy:
+Calendar-aligned real requested energy: 79342.96 kWh
+Synthetic requested energy: 127143.70 kWh
+
+Distribution comparison:
+Real and synthetic distribution metrics are saved in 11D_real_vs_synthetic_distribution_metrics.csv. The synthetic sessions are generated from empirical arrival-time, dwell-duration, energy, weekday/weekend, and daily session-count distributions, then scaled by site load.
+
+Feasibility adjustments:
+Adjustment records: 2695
+Removed infeasible synthetic sessions: 217
+
+Limitations:
+Synthetic sessions extend the scheduling scenario to forecast-only sites, but they are not observed charging logs. They should be used only for robustness and scalability analysis, not as a replacement for real multi-site session validation.
