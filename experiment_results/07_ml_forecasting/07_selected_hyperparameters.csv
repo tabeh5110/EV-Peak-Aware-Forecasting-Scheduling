@@ -1,0 +1,5 @@
+model_name,selected_candidate_id,selected_parameter_json,selection_metric,validation_MAE,validation_RMSE,validation_peak_MAE,validation_high_peak_MAE
+GradientBoostingRegressor,1,"{""learning_rate"": 0.05, ""max_depth"": 3, ""n_estimators"": 200, ""subsample"": 0.8}",validation_MAE,4.072964479572466,23.082193089560025,27.836094496058703,43.91807347109161
+XGBRegressor,1,"{""colsample_bytree"": 0.8, ""learning_rate"": 0.05, ""max_depth"": 4, ""n_estimators"": 300, ""reg_lambda"": 1.0, ""subsample"": 0.8}",validation_MAE,3.9303946200608593,22.798471124572366,26.685413692424262,42.62652653742966
+LGBMRegressor,1,"{""colsample_bytree"": 0.8, ""learning_rate"": 0.05, ""max_depth"": -1, ""n_estimators"": 300, ""num_leaves"": 31, ""reg_lambda"": 1.0, ""subsample"": 0.8}",validation_MAE,3.8864472760028264,22.813605517343092,26.981615043579996,43.19626921226297
+CatBoostRegressor,1,"{""depth"": 6, ""iterations"": 300, ""l2_leaf_reg"": 3, ""learning_rate"": 0.05}",validation_MAE,3.86982794632989,22.735020659179217,26.277281137417454,41.786362801994265

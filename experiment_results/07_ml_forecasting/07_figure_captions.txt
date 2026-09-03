@@ -1,0 +1,10 @@
+Fig. 1. Validation mean absolute error for tuned standard ML forecasting models.
+Fig. 2. Test mean absolute error for tuned standard ML forecasting models.
+Fig. 3. Test mean absolute error comparing the best Step 06 baselines and Step 07 ML models.
+Fig. 4. Test peak-hour mean absolute error for tuned standard ML forecasting models.
+Fig. 5. Test high-peak-hour mean absolute error for tuned standard ML forecasting models.
+Fig. 6. Actual load and best-by-test-MAE ML prediction for a seven-day test sample.
+Fig. 7. Actual load, best Step 06 baseline prediction, and best Step 07 ML prediction for the same seven-day test sample.
+Fig. 8. Test underestimation rate for tuned standard ML forecasting models.
+Fig. 9. Top 20 feature importances for the best-by-test-MAE ML model, when available.
+Fig. 10. Site-level test mean absolute error for the top three ML models by overall test MAE.

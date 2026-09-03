@@ -1,0 +1,66 @@
+Step 07 ML forecasting report
+==============================
+Input file used: D:\Work\Hasan2026\EV_Project\data\processed\05B_forecasting_features.csv
+Feature file used: D:\Work\Hasan2026\EV_Project\results\05B_fix_feature_engineering\05B_modeling_feature_columns.txt
+Input shape: (80602, 130)
+Train rows: 55814
+Validation rows: 12393
+Test rows: 12395
+Number of modeling features: 114
+
+Models attempted:
+- RandomForestRegressor
+- ExtraTreesRegressor
+- GradientBoostingRegressor
+- HistGradientBoostingRegressor
+- XGBRegressor
+- LGBMRegressor
+- CatBoostRegressor
+
+Models successfully evaluated:
+- GradientBoostingRegressor
+- XGBRegressor
+- LGBMRegressor
+- CatBoostRegressor
+
+Models skipped or partially skipped:
+- RandomForestRegressor: all candidates failed
+- ExtraTreesRegressor: all candidates failed
+- HistGradientBoostingRegressor: all candidates failed
+
+Selected hyperparameters:
+- GradientBoostingRegressor: candidate 1, {"learning_rate": 0.05, "max_depth": 3, "n_estimators": 200, "subsample": 0.8}
+- XGBRegressor: candidate 1, {"colsample_bytree": 0.8, "learning_rate": 0.05, "max_depth": 4, "n_estimators": 300, "reg_lambda": 1.0, "subsample": 0.8}
+- LGBMRegressor: candidate 1, {"colsample_bytree": 0.8, "learning_rate": 0.05, "max_depth": -1, "n_estimators": 300, "num_leaves": 31, "reg_lambda": 1.0, "subsample": 0.8}
+- CatBoostRegressor: candidate 1, {"depth": 6, "iterations": 300, "l2_leaf_reg": 3, "learning_rate": 0.05}
+
+Best validation ML model by MAE: CatBoostRegressor (3.8698 kW)
+Best test ML model by MAE: LGBMRegressor (4.3504 kW)
+Best test ML model by peak_MAE: LGBMRegressor (18.9936 kW)
+
+Comparison against best Step 06 baseline:
+- Best Step 06 baseline by test MAE: Linear_Regression_All_Features (4.5397 kW)
+- Best Step 07 ML by test MAE: LGBMRegressor (4.3504 kW)
+- ML improves normal-load MAE: True
+- Best Step 06 baseline by test peak_MAE: Linear_Regression_All_Features (20.0637 kW)
+- Best Step 07 ML by test peak_MAE: LGBMRegressor (18.9936 kW)
+- ML improves peak-load MAE: True
+
+Key feature importance observations:
+- diff_1h: 457 (LGBMRegressor)
+- lag_1h: 352 (LGBMRegressor)
+- ratio_lag_1h_to_24h: 333 (LGBMRegressor)
+- diff_3h: 247 (LGBMRegressor)
+- lag_336h: 229 (LGBMRegressor)
+- rolling_max_168h: 215 (LGBMRegressor)
+- lag_144h: 211 (LGBMRegressor)
+- lag_96h: 192 (LGBMRegressor)
+- diff_24h: 189 (LGBMRegressor)
+- lag_120h: 188 (LGBMRegressor)
+
+Limitations:
+- This step evaluates standard ML models only; it does not yet use peak_sample_weight.
+- Peak underestimation can remain high because models were not explicitly optimized for peak-aware loss.
+
+Recommended next step:
+- Step 08 should implement peak-aware weighted learning using peak_sample_weight.

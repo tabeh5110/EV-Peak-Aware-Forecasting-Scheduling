@@ -1,0 +1,8 @@
+Step 09B leakage safety report
+================================
+- No model training or tuning is performed.
+- Saved predictions are evaluated only.
+- Test labels are used only for statistical evaluation.
+- PRC-E-AHPA correction was selected earlier using validation only.
+- No future information is used.
+- Old deleted Step 08 and Step 08B files are not required.

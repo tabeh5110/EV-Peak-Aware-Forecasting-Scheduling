@@ -1,0 +1,17 @@
+Step 08F results report
+========================
+Selected PS-EAHPA strategy: validation_meta_model.
+Selected candidate: extratrees_meta.
+Validation MAE: 3.4876; validation peak_MAE: 23.2926; validation high_peak_MAE: 37.3424.
+
+Test metrics:
+- LGBMRegressor: MAE 4.3504, peak_MAE 18.9936, high_peak_MAE 28.4912.
+- E-AHPA: MAE 4.1909, peak_MAE 18.8912, high_peak_MAE 28.0026.
+- PRC-E-AHPA: MAE 4.2179, peak_MAE 18.5486, high_peak_MAE 27.2268.
+- PS-EAHPA: MAE 4.1776, peak_MAE 19.3075, high_peak_MAE 28.6370.
+
+PS improves MAE over E-AHPA: True.
+PS improves peak_MAE over E-AHPA: False.
+PS improves high_peak_MAE over E-AHPA: False.
+Peak bootstrap support versus LGBM: False.
+Final recommendation: PRC-E-AHPA.

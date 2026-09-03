@@ -1,0 +1,51 @@
+Step 03 build hourly load report
+=================================
+
+Input files used:
+- Arroyo_Garage_01_hourly_total.csv
+- California_Garage_01_hourly_total.csv
+- California_Garage_02_hourly_total.csv
+- N_Wilson_Garage_01_hourly_total.csv
+- Parking_Lot_01_hourly_total.csv
+- S_Wilson_Garage_01_hourly_total.csv
+
+Detected column mappings:
+- Arroyo_Garage_01_hourly_total.csv: timestamp='timestamp', load='Power (kW)', notes=none
+- California_Garage_01_hourly_total.csv: timestamp='timestamp', load='Power (kW)', notes=none
+- California_Garage_02_hourly_total.csv: timestamp='Unnamed: 0', load='0', notes=standardized columns from Unnamed: 0/0
+- N_Wilson_Garage_01_hourly_total.csv: timestamp='timestamp', load='Power (kW)', notes=none
+- Parking_Lot_01_hourly_total.csv: timestamp='timestamp', load='Power (kW)', notes=none
+- S_Wilson_Garage_01_hourly_total.csv: timestamp='timestamp', load='Power (kW)', notes=none
+
+Rows and timestamp coverage per site:
+- Arroyo_Garage_01: 4038 total hours, 2409 observed, 1629 missing (40.34%), 2020-06-18 00:00:00+00:00 to 2020-12-03 05:00:00+00:00
+- California_Garage_01: 22512 total hours, 16735 observed, 5777 missing (25.66%), 2018-05-10 04:00:00+00:00 to 2020-12-03 03:00:00+00:00
+- California_Garage_02: 17713 total hours, 15035 observed, 2678 missing (15.12%), 2018-11-26 01:00:00+00:00 to 2020-12-03 01:00:00+00:00
+- N_Wilson_Garage_01: 8816 total hours, 7602 observed, 1214 missing (13.77%), 2019-12-03 19:00:00+00:00 to 2020-12-05 02:00:00+00:00
+- Parking_Lot_01: 14817 total hours, 4410 observed, 10407 missing (70.24%), 2019-03-25 16:00:00+00:00 to 2020-12-02 00:00:00+00:00
+- S_Wilson_Garage_01: 14722 total hours, 8761 observed, 5961 missing (40.49%), 2019-03-30 14:00:00+00:00 to 2020-12-02 23:00:00+00:00
+
+Peak load per site:
+- Arroyo_Garage_01: 177.412 kW at 2020-09-03 17:00:00+00:00; mean 23.457 kW; peak/mean 7.56
+- California_Garage_01: 233.576 kW at 2020-10-09 23:00:00+00:00; mean 14.210 kW; peak/mean 16.44
+- California_Garage_02: 206.329 kW at 2020-11-01 01:00:00+00:00; mean 13.632 kW; peak/mean 15.14
+- N_Wilson_Garage_01: 1606.918 kW at 2020-08-25 19:00:00+00:00; mean 15.572 kW; peak/mean 103.19
+- Parking_Lot_01: 41.010 kW at 2020-01-06 19:00:00+00:00; mean 1.752 kW; peak/mean 23.41
+- S_Wilson_Garage_01: 24.655 kW at 2019-07-15 19:00:00+00:00; mean 2.637 kW; peak/mean 9.35
+
+Negative load corrections:
+- Arroyo_Garage_01: 0
+- California_Garage_01: 0
+- California_Garage_02: 0
+- N_Wilson_Garage_01: 0
+- Parking_Lot_01: 0
+- S_Wilson_Garage_01: 0
+
+Warnings:
+- California_Garage_02: standardized columns from Unnamed: 0/0
+
+Suitability for forecasting:
+- The standardized hourly dataset is suitable as a forecasting foundation. Missing hours are explicitly flagged and filled with zero in load_kw, while load_kw_observed preserves the original observed values for transparency.
+
+Recommended next step:
+- Create the next numbered script for hourly data validation/exploration or time-based train/test splitting. Do not train models or create scheduling optimization yet.

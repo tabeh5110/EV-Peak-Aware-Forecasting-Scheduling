@@ -1,0 +1,32 @@
+Step 09B statistical validation report
+=======================================
+Step 09B was needed because Step 08E introduced PRC-E-AHPA after Step 09 had already validated E-AHPA.
+
+Comparison summary:
+                    model_name      MAE  peak_MAE  high_peak_MAE  underestimation_rate  peak_underestimation_rate
+                 LGBMRegressor 4.350389 18.993608      28.491234             21.508673                  85.479042
+             CatBoostRegressor 4.361671 18.998519      28.039203             21.242436                  83.982036
+                        E-AHPA 4.190881 18.891186      28.002606             18.902783                  86.077844
+                    PRC-E-AHPA 4.217947 18.548588      27.226816             18.547802                  81.437126
+Linear_Regression_All_Features 4.539698 20.063716      29.688049             18.531666                  80.688623
+
+Overall MAE statistical result:
+E-AHPA vs LGBM observed MAE difference = -0.1595; row CI [-0.2277, -0.0937], block24 CI [-0.2432, -0.0862], block168 CI [-0.2583, -0.0728].
+
+Peak_MAE statistical result:
+PRC-E-AHPA vs LGBM peak-row difference = -0.4450; row CI [-1.0285, 0.0434].
+
+High-peak_MAE statistical result:
+PRC-E-AHPA vs LGBM high-peak-row difference = -1.2644; row CI [-2.3421, -0.3891].
+
+Site-level robustness:
+Site-level metrics and improvement tables are saved. Use these to show whether PRC peak gains are distributed across sites.
+
+Final model decision:
+Main forecasting model: E-AHPA.
+Peak operational variant: PRC-E-AHPA.
+Scheduling forecast recommendation: E-AHPA for default scheduling; PRC-E-AHPA for peak-risk sensitivity analysis.
+Claim strength: strong overall, cautious peak.
+
+Recommended paper wording:
+E-AHPA should be presented as the main statistically supported forecasting model for average accuracy. PRC-E-AHPA should be presented as a peak-risk calibrated operational variant that reduces observed peak and high-peak errors, with cautious language about peak statistical significance if intervals cross zero.

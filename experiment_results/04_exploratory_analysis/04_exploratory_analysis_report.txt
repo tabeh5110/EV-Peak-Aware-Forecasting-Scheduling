@@ -1,0 +1,45 @@
+Step 04 exploratory analysis report
+====================================
+
+Input files used:
+- D:\Work\Hasan2026\EV_Project\data\processed\03_hourly_load_all_sites.csv
+- D:\Work\Hasan2026\EV_Project\data\processed\02_clean_sessions.csv (found)
+- D:\Work\Hasan2026\EV_Project\data\processed\02_scheduling_ready_sessions.csv (found)
+
+Hourly records: 82618
+Number of sites: 6
+Timestamp range: 2018-05-10 04:00:00+00:00 to 2020-12-05 02:00:00+00:00
+Cleaned session count: 12645
+Scheduling-ready session count: 12645
+
+Main descriptive observations:
+- Arroyo_Garage_01: mean 23.46 kW, median 0.00 kW, peak 177.41 kW, missing hours 40.34%.
+- California_Garage_01: mean 14.21 kW, median 4.26 kW, peak 233.58 kW, missing hours 25.66%.
+- California_Garage_02: mean 13.63 kW, median 6.49 kW, peak 206.33 kW, missing hours 15.12%.
+- N_Wilson_Garage_01: mean 15.57 kW, median 3.38 kW, peak 1606.92 kW, missing hours 13.77%.
+- Parking_Lot_01: mean 1.75 kW, median 0.00 kW, peak 41.01 kW, missing hours 70.24%.
+- S_Wilson_Garage_01: mean 2.64 kW, median 0.00 kW, peak 24.66 kW, missing hours 40.49%.
+- Highest average hour of day: 17:00.
+- Lowest average hour of day: 11:00.
+- Highest average weekday: Monday (day_of_week=0).
+- Weekday: mean load 11.46 kW.
+- Weekend: mean load 7.70 kW.
+
+Peak load by site:
+- Arroyo_Garage_01: 177.41 kW at 2020-09-03 17:00:00+00:00; peak/mean ratio 7.56.
+- California_Garage_01: 233.58 kW at 2020-10-09 23:00:00+00:00; peak/mean ratio 16.44.
+- California_Garage_02: 206.33 kW at 2020-11-01 01:00:00+00:00; peak/mean ratio 15.14.
+- N_Wilson_Garage_01: 1606.92 kW at 2020-08-25 19:00:00+00:00; peak/mean ratio 103.19.
+- Parking_Lot_01: 41.01 kW at 2020-01-06 19:00:00+00:00; peak/mean ratio 23.41.
+- S_Wilson_Garage_01: 24.66 kW at 2019-07-15 19:00:00+00:00; peak/mean ratio 9.35.
+
+Daily and weekly patterns:
+- Average load varies by hour of day and by weekday, indicating temporal structure in demand.
+- Weekday/weekend average load differs, supporting calendar-based EDA and later calendar variables.
+
+Why calendar features are justified for later forecasting:
+- Hour of day, day of week, month, and weekend indicators capture recurring operational rhythms in EV charging demand.
+- These patterns should be validated in later model experiments rather than assumed as final predictive features here.
+
+Recommended next step:
+- Create the next numbered script for forecasting dataset preparation or time-based splitting. Do not train models or run scheduling optimization yet.

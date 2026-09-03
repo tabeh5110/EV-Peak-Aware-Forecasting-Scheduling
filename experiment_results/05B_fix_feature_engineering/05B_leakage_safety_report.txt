@@ -1,0 +1,45 @@
+Step 05B leakage safety report
+=============================
+
+Target variable:
+- target_load_kw is the current-hour load_kw from the standardized hourly dataset.
+
+Calendar features:
+- Calendar variables are allowed because timestamp-derived hour, weekday, month, and related indicators are known before prediction time.
+
+Lag features:
+- Lag features are computed separately within each site_id using groupby(site_id).shift(k), so each row uses only older observations from the same site.
+
+Rolling features:
+- Rolling means, standard deviations, ranges, min/max values, and quantiles are computed from past_load = groupby(site_id)['load_kw'].shift(1) before rolling.
+- This shift prevents the current target_load_kw from entering any current-row rolling feature.
+
+EWM features:
+- EWM features are also computed from shifted past_load, so the current target is excluded.
+
+Missing-hour features:
+- Missing-hour lag and rolling-count features are shifted within each site, preserving only past missingness information.
+
+Chronological split:
+- The split is assigned independently inside each site: first 70% train, next 15% validation, final 15% test.
+- No random shuffling is used.
+
+Peak thresholds:
+- Site-specific 90th and 95th percentile peak thresholds are computed only from rows labeled train for that site.
+- Peak labels and peak sample weights can support training/evaluation but are excluded from model input columns.
+
+Train-only normalization:
+- Site normalization statistics are computed only from each site's training target_load_kw values.
+- Normalized lag/rolling features divide past-load features by the train-only site mean.
+
+Columns excluded from model inputs:
+- target_load_kw, timestamp, raw load_kw/load_kw_observed, source_file, split, peak labels, peak thresholds, peak_sample_weight, and current-target normalized labels are excluded.
+
+Safe ratio handling:
+- Ratio features return NaN only when denominator history is unavailable.
+- If a denominator is exactly zero, the ratio is set to 0 and a denominator-zero flag records that valid zero-load condition.
+- Zero-load EV charging hours are not dropped solely because they appear in ratio denominators.
+
+Conclusion:
+- The saved modeling feature list contains only known-in-advance calendar variables, deterministic site identity, past-load summaries, shifted missingness, train-only peak memory, and train-only normalized past features.
+- Therefore the feature dataset is designed to be leakage-free for chronological forecasting experiments.

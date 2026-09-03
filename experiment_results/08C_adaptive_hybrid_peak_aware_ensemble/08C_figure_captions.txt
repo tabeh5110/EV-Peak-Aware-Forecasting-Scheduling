@@ -1,0 +1,13 @@
+Figure captions for Step 08C
+============================
+Fig. 1. Validation MAE versus validation peak_MAE for all AHPA hybrid candidates.
+Fig. 2. Test MAE versus test peak_MAE for best baseline, standard ML, PA, BPA, and AHPA methods.
+Fig. 3. Test MAE comparison across final method groups.
+Fig. 4. Test peak_MAE comparison across final method groups.
+Fig. 5. Test high_peak_MAE comparison across final method groups.
+Fig. 6. Peak underestimation rate comparison across final method groups.
+Fig. 7. Representative test-window actual load, standard ML prediction, and selected AHPA prediction.
+Fig. 8. Representative test-window actual load, standard ML prediction, BPA prediction, and selected AHPA prediction.
+Fig. 9. Site-level peak_MAE for selected AHPA candidates.
+Fig. 10. Number of hybrid candidates tested and passing validation MAE constraints by strategy.
+Fig. 11. Validation peak-risk distribution used for gating or meta-learning interpretation.

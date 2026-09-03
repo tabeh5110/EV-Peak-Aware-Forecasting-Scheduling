@@ -1,0 +1,8 @@
+Fig. 1. Hourly EV charging load over time by site, shown as one stacked time-series panel per charging site.
+Fig. 2. Average hourly EV charging load by hour of day across charging sites.
+Fig. 3. Average EV charging load by weekday across charging sites.
+Fig. 4. Distribution of session duration in hours for cleaned EV charging sessions.
+Fig. 5. Distribution of delivered charging energy in kWh for cleaned EV charging sessions.
+Fig. 6. Peak hourly EV charging load by site, matching the values reported in 04_peak_load_by_site.csv.
+Fig. 7. Mean hourly EV charging load by site.
+Fig. 8. Average EV charging load for weekday hours compared with weekend hours.

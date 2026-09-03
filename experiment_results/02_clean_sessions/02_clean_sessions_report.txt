@@ -1,0 +1,31 @@
+Step 02 clean sessions report
+=============================
+Input file used: D:\Work\Hasan2026\EV_Project\data\raw\clean_sessions.csv
+
+Cleaning rules applied:
+- Parsed arrival_time, departure_time, done_time, and requestedDeparture when present.
+- Removed rows with missing/invalid arrival_time or departure_time.
+- Removed rows where departure_time <= arrival_time.
+- Removed rows with missing energy_kwh or energy_kwh < 0.
+- Removed rows with session_duration_hours <= 0 or > 168 hours.
+- Removed rows with average_power_kw > 50 kW.
+- Retained zero-energy sessions in the full cleaned file and flagged them.
+- Wrote a separate scheduling-ready file with energy_kwh > 0.
+
+Original records/columns: 12646 rows, 21 columns
+Cleaned records: 12645
+Removed records: 1
+Scheduling-ready records: 12645
+
+Main data quality issues found:
+- session_duration_over_7_days: 1
+- done_time after departure_time flags: 705
+
+Records removed by reason:
+- session_duration_over_7_days: 1
+
+Suitability for later constrained scheduling:
+- The cleaned scheduling-ready subset is suitable for the next preparation step, with constraints later built from arrival/departure windows and positive energy demand.
+
+Recommended next step:
+- Create the next numbered script to standardize/load hourly demand inputs and align them with cleaned sessions. Do not train forecasting models or optimize schedules yet.

@@ -1,0 +1,17 @@
+feature_group,number_of_features,example_features,scientific_purpose
+business_period,5,is_business_hour | is_evening_departure_period | is_midday_period | is_morning_arrival_period | is_night,"Encodes workplace arrival, midday, departure, and night operating periods."
+calendar,10,day_of_month | day_of_week | day_of_year | hour | is_month_end | is_month_start | is_weekend | month,"Captures known daily, weekly, monthly, and seasonal EV charging rhythms."
+cyclical_calendar,8,day_of_week_cos | day_of_week_sin | day_of_year_cos | day_of_year_sin | hour_cos | hour_sin | month_cos | month_sin,Represents periodic calendar cycles without artificial discontinuities.
+ewm,3,ewm_mean_168h | ewm_mean_24h | ewm_mean_6h,Provides smoothed memory of recent past demand.
+interaction,7,day_of_week_x_business_hour | hour_x_business_hour | hour_x_weekend | lag_168h_x_weekend | lag_24h_x_weekend | rolling_mean_24h_x_business_hour | same_hour_last_week_x_business_hour,Allows calendar and historical effects to vary across operating periods.
+lag,16,lag_120h | lag_12h | lag_144h | lag_168h | lag_168h_normalized_by_train_mean | lag_1h | lag_1h_normalized_by_train_mean | lag_24h,Captures short-term dynamics plus daily and weekly recurrence.
+missing_indicator,6,missing_hour_lag_168h | missing_hour_lag_1h | missing_hour_lag_24h | missing_hour_rolling_count_168h | missing_hour_rolling_count_24h | was_missing_hour,Preserves transparency about zero-filled missing hours.
+peak_memory,6,hours_since_recent_peak_90 | no_previous_peak_flag | recent_peak_168h_count | recent_peak_168h_flag | recent_peak_24h_count | recent_peak_24h_flag,Adds leakage-free memory of recent peak conditions using train-only thresholds.
+ramp,8,abs_diff_1h | abs_diff_24h | diff_168h | diff_1h | diff_24h | diff_3h | ramp_rate_1h | ramp_rate_24h,Captures recent changes in load and ramp direction.
+ratio,10,denom_zero_lag_168h | denom_zero_lag_24h | denom_zero_rolling_max_24h | denom_zero_rolling_mean_168h | denom_zero_rolling_mean_24h | ratio_lag_1h_to_24h | ratio_lag_1h_to_rolling_max_24h | ratio_lag_1h_to_rolling_mean_24h,Compares recent demand against daily/weekly baselines.
+rolling_mean,10,rolling_mean_12h | rolling_mean_168h | rolling_mean_168h_normalized_by_train_mean | rolling_mean_24h | rolling_mean_24h_normalized_by_train_mean | rolling_mean_336h | rolling_mean_3h | rolling_mean_48h,Summarizes recent average demand using past observations only.
+rolling_min_max,6,rolling_max_168h | rolling_max_24h | rolling_max_336h | rolling_min_168h | rolling_min_24h | rolling_min_336h,Summarizes recent lower and upper load envelopes.
+rolling_quantile,6,rolling_q75_168h | rolling_q75_24h | rolling_q90_168h | rolling_q90_24h | rolling_q95_168h | rolling_q95_24h,Supports peak-aware prediction by describing recent high-load behavior.
+rolling_volatility,5,rolling_range_168h | rolling_range_24h | rolling_std_168h | rolling_std_24h | rolling_std_6h,Captures recent variability and rampiness in demand.
+same_hour_history,7,same_hour_2days_ago | same_hour_2weeks_ago | same_hour_3days_ago | same_hour_last_week | same_hour_yesterday | same_hour_yesterday_minus_last_week | same_hour_yesterday_ratio_last_week,Targets same-hour periodic structure important for load forecasting.
+site_identity,1,site_id_encoded,Allows models to learn site-specific baselines.

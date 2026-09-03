@@ -1,0 +1,10 @@
+Step 07 ML leakage safety report
+=================================
+- Step 05B chronological split was used exactly as saved.
+- No random split or shuffling was used.
+- Only features from 05B_modeling_feature_columns.txt were used.
+- Hyperparameters were selected using validation split only.
+- Test set was used only once for final evaluation.
+- Final models were retrained on train+validation only after validation selection.
+- Negative predictions were clipped to zero after prediction.
+- No future target, future session, price, weather, or traffic data was used.

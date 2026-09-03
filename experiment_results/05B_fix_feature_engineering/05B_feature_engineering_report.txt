@@ -1,0 +1,88 @@
+Step 05B corrected feature engineering report
+==================================
+
+Input file used: D:\Work\Hasan2026\EV_Project\data\processed\03_hourly_load_all_sites.csv
+
+Output files generated:
+- D:\Work\Hasan2026\EV_Project\data\processed\05B_forecasting_features.csv
+- D:\Work\Hasan2026\EV_Project\data\processed\05B_train_features.csv
+- D:\Work\Hasan2026\EV_Project\data\processed\05B_validation_features.csv
+- D:\Work\Hasan2026\EV_Project\data\processed\05B_test_features.csv
+- D:\Work\Hasan2026\EV_Project\results\05B_fix_feature_engineering\05B_site_id_mapping.csv
+- D:\Work\Hasan2026\EV_Project\results\05B_fix_feature_engineering\05B_feature_list.csv
+- D:\Work\Hasan2026\EV_Project\results\05B_fix_feature_engineering\05B_modeling_feature_columns.txt
+- D:\Work\Hasan2026\EV_Project\results\05B_fix_feature_engineering\05B_split_summary.csv
+- D:\Work\Hasan2026\EV_Project\results\05B_fix_feature_engineering\05B_feature_engineering_summary.csv
+- D:\Work\Hasan2026\EV_Project\results\05B_fix_feature_engineering\05B_feature_group_summary.csv
+- D:\Work\Hasan2026\EV_Project\results\05B_fix_feature_engineering\05B_row_loss_diagnostics.csv
+- D:\Work\Hasan2026\EV_Project\results\05B_fix_feature_engineering\05B_peak_label_diagnostics.csv
+- D:\Work\Hasan2026\EV_Project\results\05B_fix_feature_engineering\05B_leakage_safety_report.txt
+- D:\Work\Hasan2026\EV_Project\results\05B_fix_feature_engineering\05B_novelty_support_report.txt
+
+Number of sites: 6
+Original input shape: (82618, 6)
+Final feature dataset shape: (80602, 132)
+Old Step 05 final shape: (30809, 124)
+Train rows: 55814
+Validation rows: 12393
+Test rows: 12395
+Number of modeling features: 114
+Rows removed due to missing core history only: 2016
+Rows preserved compared with old Step 05: 49793
+
+Feature groups created:
+- business_period: 5 modeling features
+- calendar: 10 modeling features
+- cyclical_calendar: 8 modeling features
+- ewm: 3 modeling features
+- interaction: 7 modeling features
+- lag: 16 modeling features
+- missing_indicator: 6 modeling features
+- peak_memory: 6 modeling features
+- ramp: 8 modeling features
+- ratio: 10 modeling features
+- rolling_mean: 10 modeling features
+- rolling_min_max: 6 modeling features
+- rolling_quantile: 6 modeling features
+- rolling_volatility: 5 modeling features
+- same_hour_history: 7 modeling features
+- site_identity: 1 modeling features
+
+Peak thresholds and train-only normalization statistics per site:
+- Arroyo_Garage_01: p90=86.120 kW, p95=102.241 kW, train mean=22.734 kW, train std=36.190 kW, train max=177.412 kW
+- California_Garage_01: p90=55.286 kW, p95=68.179 kW, train mean=19.409 kW, train std=23.207 kW, train max=141.489 kW
+- California_Garage_02: p90=44.881 kW, p95=60.206 kW, train mean=15.389 kW, train std=19.792 kW, train max=115.319 kW
+- N_Wilson_Garage_01: p90=40.447 kW, p95=55.769 kW, train mean=11.306 kW, train std=29.406 kW, train max=1511.979 kW
+- Parking_Lot_01: p90=8.542 kW, p95=13.047 kW, train mean=2.208 kW, train std=4.919 kW, train max=41.010 kW
+- S_Wilson_Garage_01: p90=9.402 kW, p95=12.789 kW, train mean=2.644 kW, train std=4.428 kW, train max=24.655 kW
+
+Row-loss diagnostics:
+- Arroyo_Garage_01: removed 336 of 4038 rows (8.32%); none; loss is consistent with required 336-hour core history
+- California_Garage_01: removed 336 of 22512 rows (1.49%); none; loss is consistent with required 336-hour core history
+- California_Garage_02: removed 336 of 17713 rows (1.90%); none; loss is consistent with required 336-hour core history
+- N_Wilson_Garage_01: removed 336 of 8816 rows (3.81%); none; loss is consistent with required 336-hour core history
+- Parking_Lot_01: removed 336 of 14817 rows (2.27%); none; loss is consistent with required 336-hour core history
+- S_Wilson_Garage_01: removed 336 of 14722 rows (2.28%); none; loss is consistent with required 336-hour core history
+
+Peak-label diagnostics:
+- Arroyo_Garage_01 test: 7.10% peak hours, 2.48% high-peak hours
+- Arroyo_Garage_01 train: 11.16% peak hours, 5.70% high-peak hours
+- Arroyo_Garage_01 validation: 15.68% peak hours, 9.08% high-peak hours
+- California_Garage_01 test: 0.21% peak hours, 0.09% high-peak hours
+- California_Garage_01 train: 9.99% peak hours, 5.02% high-peak hours
+- California_Garage_01 validation: 0.41% peak hours, 0.09% high-peak hours
+- California_Garage_02 test: 5.12% peak hours, 2.18% high-peak hours
+- California_Garage_02 train: 10.26% peak hours, 5.14% high-peak hours
+- California_Garage_02 validation: 1.02% peak hours, 0.11% high-peak hours
+- N_Wilson_Garage_01 test: 18.07% peak hours, 8.92% high-peak hours
+- N_Wilson_Garage_01 train: 10.59% peak hours, 5.30% high-peak hours
+- N_Wilson_Garage_01 validation: 30.26% peak hours, 16.87% high-peak hours
+- Parking_Lot_01 test: 0.58% peak hours, 0.00% high-peak hours
+- Parking_Lot_01 train: 10.15% peak hours, 5.08% high-peak hours
+- Parking_Lot_01 validation: 1.08% peak hours, 0.00% high-peak hours
+- S_Wilson_Garage_01 test: 10.41% peak hours, 3.98% high-peak hours
+- S_Wilson_Garage_01 train: 10.07% peak hours, 5.08% high-peak hours
+- S_Wilson_Garage_01 validation: 5.84% peak hours, 1.81% high-peak hours
+
+Recommended next step:
+- Create the next numbered script for baseline forecasting experiments using the saved modeling feature list. Do not create prediction intervals or scheduling optimization yet.

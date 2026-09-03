@@ -1,0 +1,145 @@
+Step 01 full audit report
+=========================
+Timestamp: 2026-06-06T04:11:08
+Audit script return code: 0
+
+01B data location fix report
+-------------------------------
+Step 01B data location fix report
+===================================
+Timestamp: 2026-06-06T04:11:02
+Project root: D:\Work\Hasan2026\EV_Project
+Data directory scanned directly: D:\Work\Hasan2026\EV_Project\data
+Raw directory destination: D:\Work\Hasan2026\EV_Project\data\raw
+
+Files moved:
+- None
+
+Files skipped:
+- DUPLICATE same size left in data/: Arroyo_Garage_01_hourly_total.csv (101208 bytes)
+- SKIPPED directory: interim
+- SKIPPED directory: processed
+- SKIPPED directory: raw
+
+Duplicates detected:
+- DUPLICATE same size left in data/: Arroyo_Garage_01_hourly_total.csv (101208 bytes)
+
+Final number of files in data/raw/: 17
+
+Final files in data/raw/:
+- Arroyo_Garage_01_24h_dataset.csv
+- Arroyo_Garage_01_hourly_total.csv
+- California_Garage_01_24h_dataset.csv
+- California_Garage_01_hourly_total.csv
+- California_Garage_02_24h_dataset.csv
+- California_Garage_02_hourly_total.csv
+- N_Wilson_Garage_01_24h_dataset.csv
+- N_Wilson_Garage_01_hourly_total.csv
+- Parking_Lot_01_24h_dataset.csv
+- Parking_Lot_01_hourly_total.csv
+- S_Wilson_Garage_01_24h_dataset.csv
+- S_Wilson_Garage_01_hourly_total.csv
+- clean_sessions.csv
+- data.zip
+- hourly_load.csv
+- hourly_split.csv
+- transfer_learning_results.csv
+
+
+01 audit notes
+--------------
+EV charging data audit notes
+============================
+
+Official recommended input files found in data/raw/:
+- clean_sessions.csv
+- hourly_load.csv
+- hourly_split.csv
+- transfer_learning_results.csv
+- Arroyo_Garage_01_hourly_total.csv
+- California_Garage_01_hourly_total.csv
+- California_Garage_02_hourly_total.csv
+- N_Wilson_Garage_01_hourly_total.csv
+- Parking_Lot_01_hourly_total.csv
+- S_Wilson_Garage_01_hourly_total.csv
+
+Expected official input files not found in data/raw/:
+- None missing.
+
+Files that look like old derived 24h datasets:
+- Arroyo_Garage_01_24h_dataset.csv
+- California_Garage_01_24h_dataset.csv
+- California_Garage_02_24h_dataset.csv
+- N_Wilson_Garage_01_24h_dataset.csv
+- Parking_Lot_01_24h_dataset.csv
+- S_Wilson_Garage_01_24h_dataset.csv
+
+Files that look like old results/reference files:
+- transfer_learning_results.csv
+
+Archive/backup files:
+- data.zip
+
+Detected problems and cautions:
+- California_Garage_02_hourly_total.csv: contains generic column name 'Unnamed: 0'.
+- California_Garage_02_hourly_total.csv: contains generic column name '0'.
+- Timestamp-like columns use multiple names: arrival_time, departure_time, done_time, requestedDeparture, timestamp, timezone
+- Load/energy-like columns use multiple names: Power (kW), energy_kwh, kWhRequested, load_kW, load_kwh
+
+Recommended next step:
+- Confirm which files are the official raw inputs, then create the next numbered script for data organization/cleaning. Do not train models until the input set is confirmed.
+
+
+Summary of 01_file_inventory.csv
+--------------------------------
+01_file_inventory.csv
+- Rows: 17
+- Columns: 12
+- Column names: file_name, extension, file_size_mb, rows, columns, column_names, missing_value_count, duplicate_row_count, classification, read_error, zip_file_count, zip_example_members
+- First rows:
+  file_name | extension | file_size_mb | rows | columns | column_names | missing_value_count | duplicate_row_count | classification | read_error | zip_file_count | zip_example_members
+  Arroyo_Garage_01_24h_dataset.csv | .csv | 1.0165 | 2217.0 | 33.0 | timestamp | load_kW | lag_1 | lag_24 | lag_168 | hour | dayofweek | month | is_weekend | target_t+1 | target_t+2 | target_t+3 | target_t+4 | target_t+5 | target_t+6 | target_t+7 | target_t+8 | target_t+9 | target_t+10 | target_t+11 | target_t+12 | target_t+13 | target_t+14 | target_t+15 | target_t+16 | target_t+17 | target_t+18 | target_t+19 | target_t+20 | target_t+21 | target_t+22 | target_t+23 | target_t+24 | 0.0 | 0.0 | old derived 24h dataset |  |  | 
+  Arroyo_Garage_01_hourly_total.csv | .csv | 0.0965 | 2409.0 | 2.0 | timestamp | Power (kW) | 0.0 | 0.0 | official hourly load data |  |  | 
+  California_Garage_01_24h_dataset.csv | .csv | 7.4334 | 16543.0 | 33.0 | timestamp | load_kW | lag_1 | lag_24 | lag_168 | hour | dayofweek | month | is_weekend | target_t+1 | target_t+2 | target_t+3 | target_t+4 | target_t+5 | target_t+6 | target_t+7 | target_t+8 | target_t+9 | target_t+10 | target_t+11 | target_t+12 | target_t+13 | target_t+14 | target_t+15 | target_t+16 | target_t+17 | target_t+18 | target_t+19 | target_t+20 | target_t+21 | target_t+22 | target_t+23 | target_t+24 | 0.0 | 0.0 | old derived 24h dataset |  |  | 
+  California_Garage_01_hourly_total.csv | .csv | 0.6652 | 16735.0 | 2.0 | timestamp | Power (kW) | 0.0 | 0.0 | official hourly load data |  |  | 
+  California_Garage_02_24h_dataset.csv | .csv | 6.4945 | 14843.0 | 33.0 | timestamp | load_kW | lag_1 | lag_24 | lag_168 | hour | dayofweek | month | is_weekend | target_t+1 | target_t+2 | target_t+3 | target_t+4 | target_t+5 | target_t+6 | target_t+7 | target_t+8 | target_t+9 | target_t+10 | target_t+11 | target_t+12 | target_t+13 | target_t+14 | target_t+15 | target_t+16 | target_t+17 | target_t+18 | target_t+19 | target_t+20 | target_t+21 | target_t+22 | target_t+23 | target_t+24 | 0.0 | 0.0 | old derived 24h dataset |  |  | 
+
+Summary of 01_hourly_files_summary.csv
+--------------------------------------
+01_hourly_files_summary.csv
+- Rows: 6
+- Columns: 15
+- Column names: file_name, exists, detected_timestamp_column, detected_load_column, timestamp_min, timestamp_max, rows, missing_timestamps, duplicate_timestamps, minimum_load, maximum_load, mean_load, negative_loads, zero_load_rows, column_names
+- First rows:
+  file_name | exists | detected_timestamp_column | detected_load_column | timestamp_min | timestamp_max | rows | missing_timestamps | duplicate_timestamps | minimum_load | maximum_load | mean_load | negative_loads | zero_load_rows | column_names
+  Arroyo_Garage_01_hourly_total.csv | True | timestamp | Power (kW) | 2020-06-18 00:00:00+00:00 | 2020-12-03 05:00:00+00:00 | 2409 | 0 | 0 | 0.0 | 177.4121786309578 | 39.31925838251292 | 0 | 391 | timestamp | Power (kW)
+  California_Garage_01_hourly_total.csv | True | timestamp | Power (kW) | 2018-05-10 04:00:00+00:00 | 2020-12-03 03:00:00+00:00 | 16735 | 0 | 0 | 0.0 | 233.57571077080087 | 19.115232522871697 | 0 | 3102 | timestamp | Power (kW)
+  California_Garage_02_hourly_total.csv | True | Unnamed: 0 | 0 | 2018-11-26 01:00:00+00:00 | 2020-12-03 01:00:00+00:00 | 15035 | 0 | 0 | 0.0 | 206.32919292080408 | 16.060631899030586 | 0 | 3327 | Unnamed: 0 | 0
+  N_Wilson_Garage_01_hourly_total.csv | True | timestamp | Power (kW) | 2019-12-03 19:00:00+00:00 | 2020-12-05 02:00:00+00:00 | 7602 | 0 | 0 | 0.0 | 1606.9177187074972 | 18.059031752520013 | 0 | 2224 | timestamp | Power (kW)
+  Parking_Lot_01_hourly_total.csv | True | timestamp | Power (kW) | 2019-03-25 16:00:00+00:00 | 2020-12-02 00:00:00+00:00 | 4410 | 0 | 0 | 0.0 | 41.00999096223008 | 5.886667039670472 | 0 | 601 | timestamp | Power (kW)
+
+Summary of 01_clean_sessions_summary.csv
+-----------------------------------------
+01_clean_sessions_summary.csv
+- Rows: 11
+- Columns: 12
+- Column names: column_name, exists, missing_count, unique_count, numeric_count, numeric_mean, numeric_std, numeric_min, numeric_max, min_timestamp, max_timestamp, invalid_timestamp_count
+- First rows:
+  column_name | exists | missing_count | unique_count | numeric_count | numeric_mean | numeric_std | numeric_min | numeric_max | min_timestamp | max_timestamp | invalid_timestamp_count
+  arrival_time | True | 0 | 12612 |  |  |  |  |  | 2018-04-25 13:45:10 | 2018-11-26 18:51:09 | 0.0
+  departure_time | True | 0 | 12620 |  |  |  |  |  | 2018-04-25 18:15:46 | 2018-11-27 01:29:19 | 0.0
+  done_time | True | 6 | 12601 |  |  |  |  |  | 2018-04-25 14:51:44 | 2018-11-27 00:24:49 | 0.0
+  energy_kwh | True | 0 | 8324 | 12646.0 | 8.373272023857377 | 5.892991283684255 | 0.501 | 61.55 |  |  | 
+  kWhRequested | True | 12646 | 0 |  |  |  |  |  |  |  | 
+
+All generated Step 01 result files
+----------------------------------
+- 01B_data_location_fix_report.txt
+- 01_audit_notes.txt
+- 01_clean_sessions_summary.csv
+- 01_column_dictionary.csv
+- 01_file_inventory.csv
+- 01_full_audit_report.txt
+- 01_hourly_files_summary.csv
+- 01_numeric_summary.csv
+- 01_time_ranges.csv

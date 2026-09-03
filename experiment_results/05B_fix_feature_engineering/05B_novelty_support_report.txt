@@ -1,0 +1,27 @@
+Step 05B novelty support report
+==============================
+
+Old lag-only weakness:
+- The rejected version relied too heavily on simple lag-only forecasting signals and removed calendar context.
+
+New calendar-enhanced design:
+- This dataset includes calendar, cyclical calendar, business-period, and interaction features that reflect known operational rhythms.
+
+New weekly-lag design:
+- Daily, multi-day, weekly, and two-week lags explicitly support daily and weekly periodicity.
+
+New peak-memory features:
+- Rolling high-load quantiles and recent train-threshold peak memory features summarize recent peak behavior without future information.
+
+New peak-weighting support:
+- is_peak_hour, is_high_peak_hour, and peak_sample_weight support later PA-CatBoost / PA-LightGBM experiments with higher emphasis on peak-load hours.
+
+Denominator-zero flags for EV zero-load periods:
+- Corrected ratio handling preserves valid zero-load hours and exposes denominator-zero flags so models can learn from inactive charging periods.
+
+Uncertainty and scheduling support:
+- Leakage-free chronological splits, peak labels, and transparent missing-hour indicators create a reliable foundation for later prediction intervals and constrained EV charging scheduling.
+
+Suitability for PA-CatBoost / PA-LightGBM:
+- The final dataset includes 114 modeling features across 16 input feature groups.
+- These inputs support calendar-aware, peak-aware gradient boosting without using future sessions, future arrivals, weather, prices, or future target information.

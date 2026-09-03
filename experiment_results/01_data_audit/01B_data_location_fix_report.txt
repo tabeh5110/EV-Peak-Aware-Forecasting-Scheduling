@@ -1,0 +1,39 @@
+Step 01B data location fix report
+===================================
+Timestamp: 2026-06-06T04:11:02
+Project root: D:\Work\Hasan2026\EV_Project
+Data directory scanned directly: D:\Work\Hasan2026\EV_Project\data
+Raw directory destination: D:\Work\Hasan2026\EV_Project\data\raw
+
+Files moved:
+- None
+
+Files skipped:
+- DUPLICATE same size left in data/: Arroyo_Garage_01_hourly_total.csv (101208 bytes)
+- SKIPPED directory: interim
+- SKIPPED directory: processed
+- SKIPPED directory: raw
+
+Duplicates detected:
+- DUPLICATE same size left in data/: Arroyo_Garage_01_hourly_total.csv (101208 bytes)
+
+Final number of files in data/raw/: 17
+
+Final files in data/raw/:
+- Arroyo_Garage_01_24h_dataset.csv
+- Arroyo_Garage_01_hourly_total.csv
+- California_Garage_01_24h_dataset.csv
+- California_Garage_01_hourly_total.csv
+- California_Garage_02_24h_dataset.csv
+- California_Garage_02_hourly_total.csv
+- N_Wilson_Garage_01_24h_dataset.csv
+- N_Wilson_Garage_01_hourly_total.csv
+- Parking_Lot_01_24h_dataset.csv
+- Parking_Lot_01_hourly_total.csv
+- S_Wilson_Garage_01_24h_dataset.csv
+- S_Wilson_Garage_01_hourly_total.csv
+- clean_sessions.csv
+- data.zip
+- hourly_load.csv
+- hourly_split.csv
+- transfer_learning_results.csv

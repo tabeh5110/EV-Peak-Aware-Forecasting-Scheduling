@@ -1,0 +1,2 @@
+total_sessions,scheduling_ready_sessions,min_energy_kwh,max_energy_kwh,mean_energy_kwh,median_energy_kwh,min_session_duration_hours,max_session_duration_hours,mean_session_duration_hours,median_session_duration_hours,min_average_power_kw,max_average_power_kw,mean_average_power_kw,median_average_power_kw,unique_stationID,unique_spaceID,unique_siteID
+12645,12645,0.501,61.55,8.37381724109928,7.171,0.0875,125.81083333333332,5.717848359035192,4.399166666666667,0.0206333591943249,23.48247978436658,2.50498240553056,1.7937384898710866,54,54,1

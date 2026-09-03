@@ -1,0 +1,42 @@
+Step 06 baseline forecasting report
+====================================
+
+Input file used: D:\Work\Hasan2026\EV_Project\data\processed\05B_forecasting_features.csv
+Input shape: (80602, 130)
+Train rows: 55814
+Validation rows: 12393
+Test rows: 12395
+
+Models evaluated:
+- Zero_Load
+- Global_Train_Mean
+- Site_Train_Mean
+- Persistence_1h
+- Persistence_24h
+- Persistence_168h
+- Average_24h_168h
+- Linear_Regression_All_Features
+- Ridge_Regression_All_Features
+
+Best validation baseline by MAE: Persistence_1h (4.4705 kW)
+Best test baseline by MAE: Linear_Regression_All_Features (4.5397 kW)
+Best test peak-load baseline by peak_MAE: Linear_Regression_All_Features (20.0637 kW)
+
+Seasonal baseline observation:
+- Best simple seasonal test baseline is Average_24h_168h with MAE 6.0885 kW.
+- These simple seasonal rules provide important reference points, but they cannot adapt richly to site, calendar, peak-memory, and interaction structure.
+
+Peak underestimation observation:
+- Lowest overall test underestimation rate: Global_Train_Mean (16.46%).
+- Peak-hour underestimation remains an important diagnostic for the next peak-aware ML step.
+
+Why Step 07 ML forecasting is needed next:
+- Baselines establish the minimum performance that a stronger method must beat.
+- The corrected 05B features contain calendar, lag, rolling, peak-memory, and site-normalized signals that simple rules cannot fully exploit.
+- Step 07 should compare machine-learning models against these baselines using the same leakage-free splits.
+
+Warnings:
+- None
+
+Recommended next step:
+- Create Step 07 for ML forecasting using 05B_modeling_feature_columns.txt and compare against these Step 06 baselines. Do not create prediction intervals or scheduling optimization yet.

@@ -1,0 +1,2 @@
+original_row_count,cleaned_row_count,removed_row_count,removal_percentage,zero_energy_sessions_retained,scheduling_ready_sessions,min_arrival_time,max_arrival_time,min_departure_time,max_departure_time,min_energy_kwh,max_energy_kwh,min_session_duration_hours,max_session_duration_hours,min_average_power_kw,max_average_power_kw
+12646,12645,1,0.0079,0,12645,2018-04-25 13:45:10,2018-11-26 18:51:09,2018-04-25 18:15:46,2018-11-27 01:29:19,0.501,61.55,0.0875,125.81083333333333,0.020633359194324935,23.48247978436658

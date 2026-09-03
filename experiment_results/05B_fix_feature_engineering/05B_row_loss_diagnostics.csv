@@ -1,0 +1,7 @@
+site_id,original_rows,expected_minimum_loss_due_to_336h_history,actual_rows_removed,final_rows,removal_percentage,warning_if_excessive_loss
+Arroyo_Garage_01,4038,336,336,3702,8.321,none; loss is consistent with required 336-hour core history
+California_Garage_01,22512,336,336,22176,1.4925,none; loss is consistent with required 336-hour core history
+California_Garage_02,17713,336,336,17377,1.8969,none; loss is consistent with required 336-hour core history
+N_Wilson_Garage_01,8816,336,336,8480,3.8113,none; loss is consistent with required 336-hour core history
+Parking_Lot_01,14817,336,336,14481,2.2677,none; loss is consistent with required 336-hour core history
+S_Wilson_Garage_01,14722,336,336,14386,2.2823,none; loss is consistent with required 336-hour core history

@@ -1,0 +1,40 @@
+EV charging data audit notes
+============================
+
+Official recommended input files found in data/raw/:
+- clean_sessions.csv
+- hourly_load.csv
+- hourly_split.csv
+- transfer_learning_results.csv
+- Arroyo_Garage_01_hourly_total.csv
+- California_Garage_01_hourly_total.csv
+- California_Garage_02_hourly_total.csv
+- N_Wilson_Garage_01_hourly_total.csv
+- Parking_Lot_01_hourly_total.csv
+- S_Wilson_Garage_01_hourly_total.csv
+
+Expected official input files not found in data/raw/:
+- None missing.
+
+Files that look like old derived 24h datasets:
+- Arroyo_Garage_01_24h_dataset.csv
+- California_Garage_01_24h_dataset.csv
+- California_Garage_02_24h_dataset.csv
+- N_Wilson_Garage_01_24h_dataset.csv
+- Parking_Lot_01_24h_dataset.csv
+- S_Wilson_Garage_01_24h_dataset.csv
+
+Files that look like old results/reference files:
+- transfer_learning_results.csv
+
+Archive/backup files:
+- data.zip
+
+Detected problems and cautions:
+- California_Garage_02_hourly_total.csv: contains generic column name 'Unnamed: 0'.
+- California_Garage_02_hourly_total.csv: contains generic column name '0'.
+- Timestamp-like columns use multiple names: arrival_time, departure_time, done_time, requestedDeparture, timestamp, timezone
+- Load/energy-like columns use multiple names: Power (kW), energy_kwh, kWhRequested, load_kW, load_kwh
+
+Recommended next step:
+- Confirm which files are the official raw inputs, then create the next numbered script for data organization/cleaning. Do not train models until the input set is confirmed.

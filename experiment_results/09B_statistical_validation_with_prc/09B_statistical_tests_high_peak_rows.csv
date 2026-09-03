@@ -1,0 +1,5 @@
+comparison,proposed_model,comparator_model,subset,observed_MAE_difference,row_bootstrap_ci_lower,row_bootstrap_ci_upper,block24_ci_lower,block24_ci_upper,block168_ci_lower,block168_ci_upper,wilcoxon_p_value,sign_test_p_value,win_rate,row_count,significant_row_bootstrap,significant_block24,significant_block168
+E-AHPA_vs_LGBMRegressor,E-AHPA,LGBMRegressor,high_peak_rows,-0.4886276836645655,-1.5729927524921161,0.377243849429162,,,,,0.2669861768134444,0.21945182396290203,52.4822695035461,282,False,,
+PRC-E-AHPA_vs_LGBMRegressor,PRC-E-AHPA,LGBMRegressor,high_peak_rows,-1.2644180675467118,-2.342082386126337,-0.3890831444359543,,,,,0.013071631090081338,0.03234891121314731,55.673758865248224,282,True,,
+PRC-E-AHPA_vs_E-AHPA,PRC-E-AHPA,E-AHPA,high_peak_rows,-0.775790383882146,-0.9990661682767468,-0.5436350582378661,,,,,3.032094261710522e-12,8.493152309993734e-09,76.57657657657657,282,True,,
+PRC-E-AHPA_vs_CatBoostRegressor,PRC-E-AHPA,CatBoostRegressor,high_peak_rows,-0.8123878920374393,-1.4215162917643667,-0.23159294660066854,,,,,0.00023575763054322656,0.0011654417240763804,59.219858156028366,282,True,,

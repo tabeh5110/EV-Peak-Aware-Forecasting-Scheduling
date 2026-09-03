@@ -1,0 +1,11 @@
+split,selection,model_name,metric,metric_value
+validation,best model by MAE,Persistence_1h,MAE,4.470529299172231
+validation,best model by RMSE,Linear_Regression_All_Features,RMSE,23.667345288814793
+validation,best model by peak_MAE,Linear_Regression_All_Features,peak_MAE,27.725091962843447
+validation,best model by high_peak_MAE,Linear_Regression_All_Features,high_peak_MAE,45.13150374830797
+validation,best model by lowest underestimation_rate,Global_Train_Mean,underestimation_rate,14.605018962317438
+test,best model by MAE,Linear_Regression_All_Features,MAE,4.539697774021658
+test,best model by RMSE,Linear_Regression_All_Features,RMSE,10.229552058162216
+test,best model by peak_MAE,Linear_Regression_All_Features,peak_MAE,20.063715823615333
+test,best model by high_peak_MAE,Persistence_1h,high_peak_MAE,27.39212994889984
+test,best model by lowest underestimation_rate,Global_Train_Mean,underestimation_rate,16.45824929407019

@@ -1,0 +1,9 @@
+summary_item,model_name,metric,metric_value
+best validation ML model by MAE,CatBoostRegressor,MAE,3.86982794632989
+best test ML model by MAE,LGBMRegressor,MAE,4.350389334647338
+best test ML model by RMSE,CatBoostRegressor,RMSE,10.410988730863577
+best test ML model by peak_MAE,LGBMRegressor,peak_MAE,18.99360763155563
+best test ML model by high_peak_MAE,CatBoostRegressor,high_peak_MAE,28.039203461580772
+best model compared with best Step 06 baseline,LGBMRegressor,test_MAE_vs_baseline_MAE,-0.18930843937431963
+whether ML improves over baseline by MAE,LGBMRegressor,improves,True
+whether ML improves over baseline by peak_MAE,LGBMRegressor,improves,True

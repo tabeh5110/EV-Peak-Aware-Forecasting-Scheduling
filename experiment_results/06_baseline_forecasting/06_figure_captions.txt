@@ -1,0 +1,6 @@
+Fig. 1. Validation mean absolute error by leakage-free baseline forecasting model.
+Fig. 2. Test mean absolute error by leakage-free baseline forecasting model.
+Fig. 3. Test peak-hour mean absolute error by leakage-free baseline forecasting model.
+Fig. 4. Actual test load and best-by-MAE baseline prediction for a readable seven-day sample from a representative site.
+Fig. 5. Site-level test mean absolute error for the three best baseline models by overall test MAE.
+Fig. 6. Test underestimation rate by leakage-free baseline forecasting model.

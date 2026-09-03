@@ -1,0 +1,12 @@
+Step 06 baseline leakage safety report
+=======================================
+
+- Existing Step 05B chronological train/validation/test splits were used exactly as saved.
+- No random split was created and no shuffling was performed.
+- Zero, global-mean, site-mean, and persistence baselines are deterministic rules evaluated on validation/test rows only.
+- Global_Train_Mean uses only training target_load_kw rows.
+- Site_Train_Mean uses only same-site training target_load_kw rows.
+- Persistence baselines use lag_1h, lag_24h, and lag_168h features created from past observations only.
+- LinearRegression and Ridge, when available, are fit only on the train split using 05B_modeling_feature_columns.txt.
+- Validation and test rows are never used for fitting.
+- Negative predictions are clipped to zero only after prediction because EV charging load cannot be negative.

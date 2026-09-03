@@ -1,0 +1,131 @@
+feature_name,feature_group,description,use_as_model_input,leakage_safe_explanation
+timestamp,metadata,Tracking or provenance column; not used as a model input.,False,"Excluded from model inputs because it is target, provenance, split, threshold, label, or weight metadata."
+site_id,metadata,Tracking or provenance column; not used as a model input.,False,"Excluded from model inputs because it is target, provenance, split, threshold, label, or weight metadata."
+target_load_kw,label_or_weight,"Target-derived label, threshold, or sample weight; not a predictor.",False,"Excluded from model inputs because it is target, provenance, split, threshold, label, or weight metadata."
+split,metadata,Tracking or provenance column; not used as a model input.,False,"Excluded from model inputs because it is target, provenance, split, threshold, label, or weight metadata."
+row_number_by_site,metadata,Tracking or provenance column; not used as a model input.,False,"Excluded from model inputs because it is target, provenance, split, threshold, label, or weight metadata."
+site_total_rows,metadata,Tracking or provenance column; not used as a model input.,False,"Excluded from model inputs because it is target, provenance, split, threshold, label, or weight metadata."
+abs_diff_1h,ramp,Change/ramp feature computed from lagged values.,True,Known in advance or computed only from past/site training data.
+abs_diff_24h,ramp,Change/ramp feature computed from lagged values.,True,Known in advance or computed only from past/site training data.
+day_of_month,calendar,Known-in-advance calendar feature.,True,Known in advance or computed only from past/site training data.
+day_of_week,calendar,Known-in-advance calendar feature.,True,Known in advance or computed only from past/site training data.
+day_of_week_cos,cyclical_calendar,Sine/cosine encoding of a known calendar cycle.,True,Known in advance or computed only from past/site training data.
+day_of_week_sin,cyclical_calendar,Sine/cosine encoding of a known calendar cycle.,True,Known in advance or computed only from past/site training data.
+day_of_week_x_business_hour,interaction,Interaction among known calendar/operation variables and past-load features.,True,Known in advance or computed only from past/site training data.
+day_of_year,calendar,Known-in-advance calendar feature.,True,Known in advance or computed only from past/site training data.
+day_of_year_cos,cyclical_calendar,Sine/cosine encoding of a known calendar cycle.,True,Known in advance or computed only from past/site training data.
+day_of_year_sin,cyclical_calendar,Sine/cosine encoding of a known calendar cycle.,True,Known in advance or computed only from past/site training data.
+denom_zero_lag_168h,ratio,Safe ratio using lagged or shifted rolling features.,True,Known in advance or computed only from past/site training data.
+denom_zero_lag_24h,ratio,Safe ratio using lagged or shifted rolling features.,True,Known in advance or computed only from past/site training data.
+denom_zero_rolling_max_24h,ratio,Safe ratio using lagged or shifted rolling features.,True,Known in advance or computed only from past/site training data.
+denom_zero_rolling_mean_168h,ratio,Safe ratio using lagged or shifted rolling features.,True,Known in advance or computed only from past/site training data.
+denom_zero_rolling_mean_24h,ratio,Safe ratio using lagged or shifted rolling features.,True,Known in advance or computed only from past/site training data.
+diff_168h,ramp,Change/ramp feature computed from lagged values.,True,Known in advance or computed only from past/site training data.
+diff_1h,ramp,Change/ramp feature computed from lagged values.,True,Known in advance or computed only from past/site training data.
+diff_24h,ramp,Change/ramp feature computed from lagged values.,True,Known in advance or computed only from past/site training data.
+diff_3h,ramp,Change/ramp feature computed from lagged values.,True,Known in advance or computed only from past/site training data.
+ewm_mean_168h,ewm,Shifted exponential moving average of past load.,True,Known in advance or computed only from past/site training data.
+ewm_mean_24h,ewm,Shifted exponential moving average of past load.,True,Known in advance or computed only from past/site training data.
+ewm_mean_6h,ewm,Shifted exponential moving average of past load.,True,Known in advance or computed only from past/site training data.
+hour,calendar,Known-in-advance calendar feature.,True,Known in advance or computed only from past/site training data.
+hour_cos,cyclical_calendar,Sine/cosine encoding of a known calendar cycle.,True,Known in advance or computed only from past/site training data.
+hour_sin,cyclical_calendar,Sine/cosine encoding of a known calendar cycle.,True,Known in advance or computed only from past/site training data.
+hour_x_business_hour,interaction,Interaction among known calendar/operation variables and past-load features.,True,Known in advance or computed only from past/site training data.
+hour_x_weekend,interaction,Interaction among known calendar/operation variables and past-load features.,True,Known in advance or computed only from past/site training data.
+hours_since_recent_peak_90,peak_memory,Recent peak memory based on train-only peak thresholds and past loads.,True,Known in advance or computed only from past/site training data.
+is_business_hour,business_period,Known-in-advance operational period indicator.,True,Known in advance or computed only from past/site training data.
+is_evening_departure_period,business_period,Known-in-advance operational period indicator.,True,Known in advance or computed only from past/site training data.
+is_midday_period,business_period,Known-in-advance operational period indicator.,True,Known in advance or computed only from past/site training data.
+is_month_end,calendar,Known-in-advance calendar feature.,True,Known in advance or computed only from past/site training data.
+is_month_start,calendar,Known-in-advance calendar feature.,True,Known in advance or computed only from past/site training data.
+is_morning_arrival_period,business_period,Known-in-advance operational period indicator.,True,Known in advance or computed only from past/site training data.
+is_night,business_period,Known-in-advance operational period indicator.,True,Known in advance or computed only from past/site training data.
+is_weekend,calendar,Known-in-advance calendar feature.,True,Known in advance or computed only from past/site training data.
+lag_120h,lag,Past load value from the same site.,True,Known in advance or computed only from past/site training data.
+lag_12h,lag,Past load value from the same site.,True,Known in advance or computed only from past/site training data.
+lag_144h,lag,Past load value from the same site.,True,Known in advance or computed only from past/site training data.
+lag_168h,lag,Past load value from the same site.,True,Known in advance or computed only from past/site training data.
+lag_168h_normalized_by_train_mean,lag,Past load value from the same site.,True,Known in advance or computed only from past/site training data.
+lag_168h_x_weekend,interaction,Interaction among known calendar/operation variables and past-load features.,True,Known in advance or computed only from past/site training data.
+lag_1h,lag,Past load value from the same site.,True,Known in advance or computed only from past/site training data.
+lag_1h_normalized_by_train_mean,lag,Past load value from the same site.,True,Known in advance or computed only from past/site training data.
+lag_24h,lag,Past load value from the same site.,True,Known in advance or computed only from past/site training data.
+lag_24h_normalized_by_train_mean,lag,Past load value from the same site.,True,Known in advance or computed only from past/site training data.
+lag_24h_x_weekend,interaction,Interaction among known calendar/operation variables and past-load features.,True,Known in advance or computed only from past/site training data.
+lag_2h,lag,Past load value from the same site.,True,Known in advance or computed only from past/site training data.
+lag_336h,lag,Past load value from the same site.,True,Known in advance or computed only from past/site training data.
+lag_3h,lag,Past load value from the same site.,True,Known in advance or computed only from past/site training data.
+lag_48h,lag,Past load value from the same site.,True,Known in advance or computed only from past/site training data.
+lag_6h,lag,Past load value from the same site.,True,Known in advance or computed only from past/site training data.
+lag_72h,lag,Past load value from the same site.,True,Known in advance or computed only from past/site training data.
+lag_96h,lag,Past load value from the same site.,True,Known in advance or computed only from past/site training data.
+missing_hour_lag_168h,missing_indicator,Past or current missing-hour indicator from the standardized hourly data.,True,Known in advance or computed only from past/site training data.
+missing_hour_lag_1h,missing_indicator,Past or current missing-hour indicator from the standardized hourly data.,True,Known in advance or computed only from past/site training data.
+missing_hour_lag_24h,missing_indicator,Past or current missing-hour indicator from the standardized hourly data.,True,Known in advance or computed only from past/site training data.
+missing_hour_rolling_count_168h,missing_indicator,Past or current missing-hour indicator from the standardized hourly data.,True,Known in advance or computed only from past/site training data.
+missing_hour_rolling_count_24h,missing_indicator,Past or current missing-hour indicator from the standardized hourly data.,True,Known in advance or computed only from past/site training data.
+month,calendar,Known-in-advance calendar feature.,True,Known in advance or computed only from past/site training data.
+month_cos,cyclical_calendar,Sine/cosine encoding of a known calendar cycle.,True,Known in advance or computed only from past/site training data.
+month_sin,cyclical_calendar,Sine/cosine encoding of a known calendar cycle.,True,Known in advance or computed only from past/site training data.
+no_previous_peak_flag,peak_memory,Recent peak memory based on train-only peak thresholds and past loads.,True,Known in advance or computed only from past/site training data.
+quarter,calendar,Known-in-advance calendar feature.,True,Known in advance or computed only from past/site training data.
+ramp_rate_1h,ramp,Change/ramp feature computed from lagged values.,True,Known in advance or computed only from past/site training data.
+ramp_rate_24h,ramp,Change/ramp feature computed from lagged values.,True,Known in advance or computed only from past/site training data.
+ratio_lag_1h_to_24h,ratio,Safe ratio using lagged or shifted rolling features.,True,Known in advance or computed only from past/site training data.
+ratio_lag_1h_to_rolling_max_24h,ratio,Safe ratio using lagged or shifted rolling features.,True,Known in advance or computed only from past/site training data.
+ratio_lag_1h_to_rolling_mean_24h,ratio,Safe ratio using lagged or shifted rolling features.,True,Known in advance or computed only from past/site training data.
+ratio_lag_24h_to_168h,ratio,Safe ratio using lagged or shifted rolling features.,True,Known in advance or computed only from past/site training data.
+ratio_rolling_mean_24h_to_168h,ratio,Safe ratio using lagged or shifted rolling features.,True,Known in advance or computed only from past/site training data.
+recent_peak_168h_count,peak_memory,Recent peak memory based on train-only peak thresholds and past loads.,True,Known in advance or computed only from past/site training data.
+recent_peak_168h_flag,peak_memory,Recent peak memory based on train-only peak thresholds and past loads.,True,Known in advance or computed only from past/site training data.
+recent_peak_24h_count,peak_memory,Recent peak memory based on train-only peak thresholds and past loads.,True,Known in advance or computed only from past/site training data.
+recent_peak_24h_flag,peak_memory,Recent peak memory based on train-only peak thresholds and past loads.,True,Known in advance or computed only from past/site training data.
+rolling_max_168h,rolling_min_max,Shifted rolling minimum or maximum summary.,True,Known in advance or computed only from past/site training data.
+rolling_max_24h,rolling_min_max,Shifted rolling minimum or maximum summary.,True,Known in advance or computed only from past/site training data.
+rolling_max_336h,rolling_min_max,Shifted rolling minimum or maximum summary.,True,Known in advance or computed only from past/site training data.
+rolling_mean_12h,rolling_mean,Shifted rolling mean using only previous load values.,True,Known in advance or computed only from past/site training data.
+rolling_mean_168h,rolling_mean,Shifted rolling mean using only previous load values.,True,Known in advance or computed only from past/site training data.
+rolling_mean_168h_normalized_by_train_mean,rolling_mean,Shifted rolling mean using only previous load values.,True,Known in advance or computed only from past/site training data.
+rolling_mean_24h,rolling_mean,Shifted rolling mean using only previous load values.,True,Known in advance or computed only from past/site training data.
+rolling_mean_24h_normalized_by_train_mean,rolling_mean,Shifted rolling mean using only previous load values.,True,Known in advance or computed only from past/site training data.
+rolling_mean_24h_x_business_hour,interaction,Interaction among known calendar/operation variables and past-load features.,True,Known in advance or computed only from past/site training data.
+rolling_mean_336h,rolling_mean,Shifted rolling mean using only previous load values.,True,Known in advance or computed only from past/site training data.
+rolling_mean_3h,rolling_mean,Shifted rolling mean using only previous load values.,True,Known in advance or computed only from past/site training data.
+rolling_mean_48h,rolling_mean,Shifted rolling mean using only previous load values.,True,Known in advance or computed only from past/site training data.
+rolling_mean_6h,rolling_mean,Shifted rolling mean using only previous load values.,True,Known in advance or computed only from past/site training data.
+rolling_mean_72h,rolling_mean,Shifted rolling mean using only previous load values.,True,Known in advance or computed only from past/site training data.
+rolling_min_168h,rolling_min_max,Shifted rolling minimum or maximum summary.,True,Known in advance or computed only from past/site training data.
+rolling_min_24h,rolling_min_max,Shifted rolling minimum or maximum summary.,True,Known in advance or computed only from past/site training data.
+rolling_min_336h,rolling_min_max,Shifted rolling minimum or maximum summary.,True,Known in advance or computed only from past/site training data.
+rolling_q75_168h,rolling_quantile,Shifted rolling upper quantile for recent high-load behavior.,True,Known in advance or computed only from past/site training data.
+rolling_q75_24h,rolling_quantile,Shifted rolling upper quantile for recent high-load behavior.,True,Known in advance or computed only from past/site training data.
+rolling_q90_168h,rolling_quantile,Shifted rolling upper quantile for recent high-load behavior.,True,Known in advance or computed only from past/site training data.
+rolling_q90_24h,rolling_quantile,Shifted rolling upper quantile for recent high-load behavior.,True,Known in advance or computed only from past/site training data.
+rolling_q95_168h,rolling_quantile,Shifted rolling upper quantile for recent high-load behavior.,True,Known in advance or computed only from past/site training data.
+rolling_q95_24h,rolling_quantile,Shifted rolling upper quantile for recent high-load behavior.,True,Known in advance or computed only from past/site training data.
+rolling_range_168h,rolling_volatility,Shifted rolling spread or volatility summary.,True,Known in advance or computed only from past/site training data.
+rolling_range_24h,rolling_volatility,Shifted rolling spread or volatility summary.,True,Known in advance or computed only from past/site training data.
+rolling_std_168h,rolling_volatility,Shifted rolling spread or volatility summary.,True,Known in advance or computed only from past/site training data.
+rolling_std_24h,rolling_volatility,Shifted rolling spread or volatility summary.,True,Known in advance or computed only from past/site training data.
+rolling_std_6h,rolling_volatility,Shifted rolling spread or volatility summary.,True,Known in advance or computed only from past/site training data.
+same_hour_2days_ago,same_hour_history,Same-hour daily or weekly historical load relationship.,True,Known in advance or computed only from past/site training data.
+same_hour_2weeks_ago,same_hour_history,Same-hour daily or weekly historical load relationship.,True,Known in advance or computed only from past/site training data.
+same_hour_3days_ago,same_hour_history,Same-hour daily or weekly historical load relationship.,True,Known in advance or computed only from past/site training data.
+same_hour_last_week,same_hour_history,Same-hour daily or weekly historical load relationship.,True,Known in advance or computed only from past/site training data.
+same_hour_last_week_x_business_hour,interaction,Interaction among known calendar/operation variables and past-load features.,True,Known in advance or computed only from past/site training data.
+same_hour_yesterday,same_hour_history,Same-hour daily or weekly historical load relationship.,True,Known in advance or computed only from past/site training data.
+same_hour_yesterday_minus_last_week,same_hour_history,Same-hour daily or weekly historical load relationship.,True,Known in advance or computed only from past/site training data.
+same_hour_yesterday_ratio_last_week,same_hour_history,Same-hour daily or weekly historical load relationship.,True,Known in advance or computed only from past/site training data.
+site_id_encoded,site_identity,Deterministic encoded site identifier.,True,Known in advance or computed only from past/site training data.
+was_missing_hour,missing_indicator,Past or current missing-hour indicator from the standardized hourly data.,True,Known in advance or computed only from past/site training data.
+week_of_year,calendar,Known-in-advance calendar feature.,True,Known in advance or computed only from past/site training data.
+is_peak_hour,label_or_weight,"Target-derived label, threshold, or sample weight; not a predictor.",False,"Excluded from model inputs because it is target, provenance, split, threshold, label, or weight metadata."
+is_high_peak_hour,label_or_weight,"Target-derived label, threshold, or sample weight; not a predictor.",False,"Excluded from model inputs because it is target, provenance, split, threshold, label, or weight metadata."
+peak_threshold_90_train_kw,label_or_weight,"Target-derived label, threshold, or sample weight; not a predictor.",False,"Excluded from model inputs because it is target, provenance, split, threshold, label, or weight metadata."
+peak_threshold_95_train_kw,label_or_weight,"Target-derived label, threshold, or sample weight; not a predictor.",False,"Excluded from model inputs because it is target, provenance, split, threshold, label, or weight metadata."
+peak_sample_weight,label_or_weight,"Target-derived label, threshold, or sample weight; not a predictor.",False,"Excluded from model inputs because it is target, provenance, split, threshold, label, or weight metadata."
+target_load_kw_normalized_by_train_mean,normalized_by_site,Train-only site-normalized load history feature.,False,"Excluded from model inputs because it is target, provenance, split, threshold, label, or weight metadata."
+train_mean_load_kw,metadata,Tracking or provenance column; not used as a model input.,False,"Excluded from model inputs because it is target, provenance, split, threshold, label, or weight metadata."
+train_std_load_kw,metadata,Tracking or provenance column; not used as a model input.,False,"Excluded from model inputs because it is target, provenance, split, threshold, label, or weight metadata."
+train_max_load_kw,metadata,Tracking or provenance column; not used as a model input.,False,"Excluded from model inputs because it is target, provenance, split, threshold, label, or weight metadata."
+source_file,metadata,Tracking or provenance column; not used as a model input.,False,"Excluded from model inputs because it is target, provenance, split, threshold, label, or weight metadata."

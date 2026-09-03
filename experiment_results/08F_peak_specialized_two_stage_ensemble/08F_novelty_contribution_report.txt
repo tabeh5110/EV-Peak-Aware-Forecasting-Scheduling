@@ -1,0 +1,6 @@
+Step 08F novelty contribution report
+=====================================
+This study proposes two-stage peak-specialized EV charging load forecasting.
+The method combines a strong E-AHPA base forecast with a peak-risk gate and train-only peak-specialist regressors.
+Validation-constrained multi-objective selection preserves average accuracy while targeting peak and high-peak errors.
+The method is statistically evaluated before scheduling, supporting defensible claims about the peak/average tradeoff.

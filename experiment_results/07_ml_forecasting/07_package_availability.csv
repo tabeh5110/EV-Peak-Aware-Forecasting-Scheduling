@@ -1,0 +1,8 @@
+package/model,available,version,action_taken
+sklearn,True,1.7.2,used for sklearn regressors
+joblib,True,1.5.3,save model artifacts
+MLPRegressor,True,1.7.2,skipped optional MLP to keep Step 07 runtime safe and reproducible
+LinearSVR,True,1.7.2,skipped optional LinearSVR; nonlinear SVR excluded as too costly for 80k rows and 114 features
+xgboost,True,3.1.2,attempt XGBRegressor
+lightgbm,True,4.6.0,attempt LGBMRegressor
+catboost,True,1.2.10,attempt CatBoostRegressor

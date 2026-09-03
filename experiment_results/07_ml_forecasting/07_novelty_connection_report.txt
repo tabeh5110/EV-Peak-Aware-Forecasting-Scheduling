@@ -1,0 +1,7 @@
+Step 07 novelty connection report
+==================================
+- Step 07 is not the final proposed novelty.
+- Step 07 establishes strong tuned ML baselines under a strict chronological protocol.
+- Validation-based tuning addresses the old reviewer criticism about mostly default model settings.
+- The next contribution will be Step 08 peak-aware weighted learning using peak_sample_weight.
+- Step 07 helps show whether advanced ML alone is enough or whether explicit peak-aware learning is needed.

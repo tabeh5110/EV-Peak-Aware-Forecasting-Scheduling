@@ -1,0 +1,12 @@
+column_name,exists,missing_count,unique_count,numeric_count,numeric_mean,numeric_std,numeric_min,numeric_max,min_timestamp,max_timestamp,invalid_timestamp_count
+arrival_time,True,0,12612,,,,,,2018-04-25 13:45:10,2018-11-26 18:51:09,0.0
+departure_time,True,0,12620,,,,,,2018-04-25 18:15:46,2018-11-27 01:29:19,0.0
+done_time,True,6,12601,,,,,,2018-04-25 14:51:44,2018-11-27 00:24:49,0.0
+energy_kwh,True,0,8324,12646.0,8.373272023857377,5.892991283684255,0.501,61.55,,,
+kWhRequested,True,12646,0,,,,,,,,
+minutesAvailable,True,12646,0,,,,,,,,
+stationID,True,0,54,,,,,,,,
+spaceID,True,0,54,,,,,,,,
+siteID,True,0,1,12646.0,2.0,0.0,2.0,2.0,,,
+timezone,True,0,1,,,,,,,,12646.0
+requestedDeparture,True,12646,0,,,,,,,,0.0

@@ -1,0 +1,2 @@
+model_name,strategy,status,error
+HistGB_weighted,weighted_all_train,failed,"PermissionError(13, 'Access is denied', None, 5, None)"

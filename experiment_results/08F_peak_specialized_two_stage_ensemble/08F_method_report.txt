@@ -1,0 +1,6 @@
+Step 08F method report
+==========================
+PS-EAHPA is a Peak-Specialized Enhanced Adaptive Hybrid Peak-Aware Ensemble.
+Step 08D E-AHPA gave strong overall MAE improvement, while Step 08E PRC improved observed peak errors but still had mixed peak significance.
+Step 08F therefore trains train-only peak-risk gates and peak-specialist regressors, then uses validation-only multi-objective selection to decide when a peak-specialist prediction should replace or adjust the base forecast.
+The design avoids test chasing by fixing all thresholds, blends, and candidate choices before test evaluation.

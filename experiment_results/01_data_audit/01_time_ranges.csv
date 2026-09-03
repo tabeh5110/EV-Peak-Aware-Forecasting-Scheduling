@@ -1,0 +1,17 @@
+file_name,time_column,non_missing_values,min_timestamp,max_timestamp,invalid_timestamp_count
+Arroyo_Garage_01_24h_dataset.csv,timestamp,2217,2020-07-03 19:00:00+00:00,2020-12-01 19:00:00+00:00,0
+Arroyo_Garage_01_hourly_total.csv,timestamp,2409,2020-06-18 00:00:00+00:00,2020-12-03 05:00:00+00:00,0
+California_Garage_01_24h_dataset.csv,timestamp,16543,2018-05-17 04:00:00+00:00,2020-12-01 17:00:00+00:00,0
+California_Garage_01_hourly_total.csv,timestamp,16735,2018-05-10 04:00:00+00:00,2020-12-03 03:00:00+00:00,0
+California_Garage_02_24h_dataset.csv,timestamp,14843,2018-12-05 16:00:00+00:00,2020-12-02 01:00:00+00:00,0
+clean_sessions.csv,arrival_time,12646,2018-04-25 13:45:10,2018-11-26 18:51:09,0
+clean_sessions.csv,departure_time,12646,2018-04-25 18:15:46,2018-11-27 01:29:19,0
+clean_sessions.csv,done_time,12640,2018-04-25 14:51:44,2018-11-27 00:24:49,0
+clean_sessions.csv,timezone,12646,,,12646
+clean_sessions.csv,requestedDeparture,0,,,0
+N_Wilson_Garage_01_24h_dataset.csv,timestamp,7410,2019-12-17 11:00:00+00:00,2020-12-04 02:00:00+00:00,0
+N_Wilson_Garage_01_hourly_total.csv,timestamp,7602,2019-12-03 19:00:00+00:00,2020-12-05 02:00:00+00:00,0
+Parking_Lot_01_24h_dataset.csv,timestamp,4218,2019-04-16 22:00:00+00:00,2020-11-25 00:00:00+00:00,0
+Parking_Lot_01_hourly_total.csv,timestamp,4410,2019-03-25 16:00:00+00:00,2020-12-02 00:00:00+00:00,0
+S_Wilson_Garage_01_24h_dataset.csv,timestamp,8569,2019-04-08 05:00:00+00:00,2020-12-01 12:00:00+00:00,0
+S_Wilson_Garage_01_hourly_total.csv,timestamp,8761,2019-03-30 14:00:00+00:00,2020-12-02 23:00:00+00:00,0

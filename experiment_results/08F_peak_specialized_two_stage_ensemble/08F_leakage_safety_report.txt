@@ -1,0 +1,8 @@
+Step 08F leakage safety report
+===============================
+- Peak-risk gates and peak-specialist regressors are fitted only on the train split.
+- Ensemble thresholds, blends, switches, and meta-models are selected only on validation.
+- Test labels are used only for final evaluation.
+- Actual test peak labels are not used as predictors.
+- Inputs are Step 05B leakage-free features and saved predictions only.
+- No future load, session, weather, traffic, price, or scheduling information is used.
