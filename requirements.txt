@@ -1,0 +1,12 @@
+requirements
+numpy
+pandas
+scikit-learn
+lightgbm
+catboost
+xgboost
+matplotlib
+seaborn
+scipy
+statsmodels
+jupyter
