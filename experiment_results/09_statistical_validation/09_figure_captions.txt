@@ -1,0 +1,10 @@
+Figure captions for Step 09
+===========================
+Fig. 1. Recomputed test MAE for selected baseline, standard ML, previous AHPA, and E-AHPA models.
+Fig. 2. Recomputed test peak_MAE for selected models.
+Fig. 3. Absolute-error distribution comparison for E-AHPA and LGBMRegressor.
+Fig. 4. Site-level delta_MAE for E-AHPA minus LGBMRegressor.
+Fig. 5. Site-level delta_peak_MAE for E-AHPA minus LGBMRegressor.
+Fig. 6. Monthly MAE for E-AHPA and LGBMRegressor.
+Fig. 7. Row-bootstrap confidence intervals for MAE differences.
+Fig. 8. Actual peak load versus absolute error for E-AHPA and LGBMRegressor.

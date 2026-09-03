@@ -1,0 +1,9 @@
+Figure captions for Step 10
+============================
+Fig. 1. Representative E-AHPA point forecast with selected lower and upper interval.
+Fig. 2. Representative PRC-E-AHPA point forecast with selected interval.
+Fig. 3. Empirical coverage versus average interval width across interval methods.
+Fig. 4. Peak and high-peak coverage comparison across 90% interval methods.
+Fig. 5. Site-level coverage for the selected interval method.
+Fig. 6. Point forecast versus upper-bound underestimation rates.
+Fig. 7. Monthly coverage for the selected interval method.

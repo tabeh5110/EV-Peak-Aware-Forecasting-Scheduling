@@ -1,0 +1,12 @@
+Step 11 novelty contribution report
+===================================
+This step connects the forecasting contribution to an operational EV charging scheduling task. The contribution is not only lower point-forecast error; it is the use of forecast-informed and uncertainty-aware signals inside a constrained session-level scheduler.
+
+Novel elements for the paper:
+- E-AHPA point forecasts guide flexible charging away from predicted high-load hours.
+- PRC-E-AHPA peak-sensitive forecasts provide a conservative operational variant.
+- Step 10 upper prediction bounds are used for uncertainty-aware scheduling.
+- Session-level feasibility is enforced with arrival/departure, energy, charger power, and site capacity constraints.
+- Results report energy delivery, unserved energy, and capacity violations, avoiding unrealistic peak-reduction claims.
+
+The manuscript should emphasize that uncertainty-aware scheduling is designed to reduce operational risk and capacity violations, not necessarily to maximize peak reduction at any cost.

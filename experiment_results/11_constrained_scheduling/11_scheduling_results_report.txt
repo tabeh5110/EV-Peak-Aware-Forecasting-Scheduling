@@ -1,0 +1,25 @@
+Step 11 constrained scheduling results report
+================================================
+Sessions loaded: 12645
+Invalid sessions removed: 0
+Sessions scheduled: 9110
+Sites scheduled: 1
+Scheduling time period: 2020-07-15 11:00:00+00:00 to 2020-12-05 02:00:00+00:00
+Scenario mode: calendar_aligned_forecast_horizon
+
+Feasibility:
+The selected scheduling scenario delivered 79644.66 kWh under uncertainty-aware scheduling out of 79676.49 kWh requested.
+Unserved energy under uncertainty-aware scheduling was 31.84 kWh (0.04%).
+The uncertainty-aware full-session service rate was 98.81%.
+
+Peak and capacity results:
+Uncontrolled peak load was 222.84 kW.
+Uncertainty-aware peak load was 129.60 kW, a reduction of 93.24 kW (41.84%).
+Uncertainty-aware capacity violation hours were 5, compared with 169 for uncontrolled charging.
+
+Best strategies:
+Best strategy by peak reduction: valley_filling (51.32%).
+Best strategy by lowest capacity violations: valley_filling (0 violation hours).
+
+Limitations:
+Results depend on the available session file and Step 10 forecast horizon. Because the raw session timestamps and forecast horizon do not fully align in this project version, scenario_mode should be reported when interpreting results. The greedy scheduler is transparent and realistic, but it is not a globally optimal MILP solution.

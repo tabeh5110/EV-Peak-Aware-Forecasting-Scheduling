@@ -1,0 +1,2 @@
+claim_strength,reason,scenarios_evaluated,capacity_improvement_share_vs_uncontrolled,low_unserved_energy_share_le_1pct,uncertainty_aware_best_capacity_share,uncertainty_aware_best_peak_share,mean_uncertainty_aware_peak_reduction_percent,mean_uncertainty_aware_capacity_violation_hours,mean_uncertainty_aware_unserved_energy_percent
+moderate,"uncertainty-aware scheduling improves capacity safety in many scenarios, but another strategy can have stronger peak reduction",135,0.8,1.0,0.4,0.0,42.79504362917124,16.91111111111111,0.05587430710710334

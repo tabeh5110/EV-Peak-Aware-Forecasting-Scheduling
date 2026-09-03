@@ -1,0 +1,6 @@
+Step 10 novelty contribution report
+====================================
+E-AHPA provides statistically supported point forecasting, while PRC-E-AHPA provides a peak-risk operational forecast.
+Conformal prediction intervals add uncertainty awareness to the forecast-to-schedule framework.
+The selected upper-bound forecast supports safer constrained scheduling by reducing load underestimation risk.
+This strengthens the transition from point prediction to operational EV charging control.

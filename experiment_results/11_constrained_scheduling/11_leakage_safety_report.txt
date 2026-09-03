@@ -1,0 +1,8 @@
+Step 11 leakage safety report
+=============================
+- Scheduling decisions use session arrival times, departure times, requested energy, charger power limits, site capacity assumptions, and Step 10 forecast columns.
+- Actual future load is not used to rank scheduling hours.
+- The actual_load_kw column from Step 10 is carried only for evaluation context and plotting, not for scheduling decisions.
+- Site capacity is estimated from reconstructed uncontrolled load or historical hourly load, not from future test labels during scheduling.
+- Evaluation metrics are computed only after schedules are created.
+- No forecasting model is retrained and no data cleaning/modeling code is introduced in this step.

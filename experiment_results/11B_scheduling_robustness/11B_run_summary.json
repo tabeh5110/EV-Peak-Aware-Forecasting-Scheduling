@@ -1,0 +1,12 @@
+{
+  "raw_sites": 1,
+  "forecast_sites": 6,
+  "scheduled_sites": 2,
+  "scheduled_sessions": 18220,
+  "scenario_count": 135,
+  "best_peak_strategy": "valley_filling",
+  "best_capacity_strategy": "peak_sensitive",
+  "ua_avg_peak_reduction": 42.79504362917124,
+  "ua_avg_capacity_reduction": 106.77777777777777,
+  "claim_strength": "moderate"
+}

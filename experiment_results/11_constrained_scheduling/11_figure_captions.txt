@@ -1,0 +1,12 @@
+Step 11 figure captions
+=======================
+Fig. 11.1. Workflow from point forecasts and prediction intervals to constrained EV charging schedules.
+Fig. 11.2. Peak scheduled load by strategy.
+Fig. 11.3. Peak reduction percentage relative to uncontrolled charging.
+Fig. 11.4. Capacity violation hours by strategy.
+Fig. 11.5. Unserved energy percentage by strategy.
+Fig. 11.6. Representative seven-day scheduled load profiles.
+Fig. 11.7. Site-level peak reduction by strategy.
+Fig. 11.8. Load factor comparison by strategy.
+Fig. 11.9. Energy delivered percentage by strategy.
+Fig. 11.10. Upper forecast signal and uncertainty-aware scheduled load for a representative site/week.

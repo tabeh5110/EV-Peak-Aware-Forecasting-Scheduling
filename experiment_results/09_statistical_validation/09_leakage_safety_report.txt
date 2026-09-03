@@ -1,0 +1,8 @@
+Step 09 leakage safety report
+==============================
+- This step does not train, retune, or improve forecasting models.
+- Step 08D E-AHPA is treated as a fixed proposed model.
+- Test predictions are aligned and evaluated only.
+- Test labels are used only for statistical evaluation, not model selection.
+- Missing old Step 08 and Step 08B files are ignored, not reconstructed.
+- The analysis uses only currently available prediction files and Step 05B test labels.

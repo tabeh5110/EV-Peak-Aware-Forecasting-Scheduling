@@ -1,0 +1,8 @@
+Step 11B leakage safety report
+================================
+- Scheduling decisions use only session constraints, capacity assumptions, and Step 10 forecast columns.
+- Actual future load is not used to rank scheduling hours.
+- Sensitivity scenarios vary capacity, charger power, forecast signal, and horizon definitions; they do not tune hidden test labels.
+- The calendar-aligned scenario is documented as an operational stress-test scenario, not a direct historical replay.
+- Evaluation metrics are computed after schedules are generated.
+- No future information is used in scheduling decisions.

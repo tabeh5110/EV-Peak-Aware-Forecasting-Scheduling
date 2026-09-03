@@ -1,0 +1,28 @@
+Step 11B scheduling robustness report
+=======================================
+Why Step 11B was needed:
+Step 11 produced promising constrained scheduling results, but it scheduled one session-supported site and used a calendar-aligned forecast-horizon scenario. Step 11B tests whether those findings are stable under alternative capacity assumptions, charger powers, forecast-signal settings, and scheduling horizons.
+
+Coverage diagnosis:
+The session-level file supports 1 raw site, while Step 10 forecasts cover 6 sites. The final sensitivity analysis therefore remains a one-site session-level scheduling case study with 18220 usable calendar-aligned sessions.
+
+Capacity sensitivity:
+The analysis evaluated 5 capacity assumptions: p90, p95, p95 plus 10%, historical peak, and mean plus 2 standard deviations. Capacity violation outcomes vary by assumption, which confirms that capacity assumptions should be reported explicitly.
+
+Charger power sensitivity:
+The analysis evaluated 6.6, 7.2, and 11.0 kW charger assumptions. Higher charger power increases flexibility but can also increase instantaneous peak risk if unmanaged.
+
+Strategy comparison:
+Across 135 sensitivity scenarios, the best observed peak-reduction row was valley_filling with 66.75% peak reduction. The best observed capacity-safety row was peak_sensitive with 0 capacity violation hours.
+
+Uncertainty-aware usefulness:
+Uncertainty-aware scheduling averaged 42.80% peak reduction and 16.91 capacity violation hours across sensitivity scenarios. Its mean unserved energy was 0.056%.
+
+Final scheduling claim strength:
+moderate. Reason: uncertainty-aware scheduling improves capacity safety in many scenarios, but another strategy can have stronger peak reduction.
+
+Limitations:
+The scheduling evidence is a one-site, calendar-aligned operational case study. It is useful for demonstrating feasibility and forecast-informed scheduling logic, but it should not be overgeneralized to all forecast sites without additional session-level data.
+
+Recommended paper wording:
+Use cautious language: "In a one-site calendar-aligned scheduling case study, forecast-informed and uncertainty-aware scheduling reduced peak/capacity risk while preserving high charging completion rates." Avoid saying that multi-site real-time scheduling was validated.

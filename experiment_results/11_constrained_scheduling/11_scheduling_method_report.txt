@@ -1,0 +1,32 @@
+Step 11 constrained scheduling method report
+==============================================
+Purpose:
+Build realistic constrained EV charging schedules from session-level charging demand and Step 10 uncertainty-aware forecasts.
+
+Scheduling formulation:
+Each charging session is represented by an arrival time, departure time, requested energy, and maximum charger power. The scheduler assigns hourly energy within the session availability window only. Energy is never assigned before arrival or after departure.
+
+Session constraints:
+- Hourly charging power is capped by the session charger power limit.
+- Total delivered energy cannot exceed requested energy.
+- The scheduler attempts to deliver all requested energy before departure.
+- If the site capacity constraint prevents full service, remaining energy is either scheduled as a soft capacity violation when physically feasible or recorded as unmet energy when the session window is infeasible.
+
+Site capacity assumptions:
+For each site, the default site_capacity_kw is max(95th percentile uncontrolled session load, mean + 2*std). If reconstructed uncontrolled load is unavailable, historical hourly load is used as the fallback basis.
+
+Strategies:
+- uncontrolled: immediate charging after arrival at the charger power limit.
+- valley_filling: deadline-aware scheduling into lower currently scheduled load hours.
+- point_forecast: schedules flexible energy into hours with lower E-AHPA point forecasts.
+- peak_sensitive: schedules using the PRC-E-AHPA peak-sensitive forecast.
+- uncertainty_aware: schedules using the Step 10 upper forecast bound.
+
+Forecast use:
+The point, peak-sensitive, and uncertainty-aware strategies use Step 10 forecast columns as scheduling signals. Actual future test load is not used for decisions.
+
+Coverage handling:
+The raw session timestamps did not overlap the Step 10 forecast horizon; therefore, the script created a documented calendar-aligned operational scenario using the real session durations, arrival times, departure windows, and energy requests.
+
+Why this is more realistic than old scheduling:
+This step uses session-level arrival/departure windows, energy demand, charger power limits, explicit site capacity assumptions, and feasibility reporting. It avoids reporting peak reduction without also reporting energy delivery, unserved energy, and capacity violations.

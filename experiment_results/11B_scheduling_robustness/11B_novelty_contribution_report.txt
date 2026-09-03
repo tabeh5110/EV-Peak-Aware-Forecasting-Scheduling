@@ -1,0 +1,10 @@
+Step 11B novelty contribution report
+=====================================
+Step 11B strengthens the scheduling contribution by adding robustness and sensitivity testing around the constrained scheduling case study.
+
+Contribution elements:
+- Session-level constrained scheduling with arrival/departure windows, energy requests, charger limits, and capacity assumptions.
+- Forecast-informed scheduling using E-AHPA and PRC-E-AHPA forecast signals.
+- Uncertainty-aware scheduling using Step 10 upper-bound forecasts.
+- Sensitivity testing across capacity assumptions, charger power assumptions, forecast signals, and horizon choices.
+- Honest feasibility reporting, including unserved energy, capacity violations, and the one-site/calendar-aligned limitation.

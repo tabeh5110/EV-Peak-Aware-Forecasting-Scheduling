@@ -1,0 +1,22 @@
+Step 11B coverage explanation report
+====================================
+Why only one site was scheduled:
+The session-level file contains one raw session site, while the Step 10 forecast file contains six hourly forecast sites. Step 11 mapped the one available session site to a forecast/hourly site and therefore only one site had session-level demand that could be scheduled.
+
+Data limitation or code issue:
+This is a data limitation rather than a scheduling-code issue. The scheduler can evaluate any site that has session-level arrivals, departures, energy requests, and matching forecast hours. In this project version, the processed session file provides session-level constraints for one raw site only.
+
+Timestamp limitation:
+The raw session timestamps are from an earlier period than the Step 10 forecast horizon. Direct timestamp overlap between raw sessions and Step 10 forecasts is therefore unavailable. Step 11 used a documented calendar-aligned forecast-horizon scenario to test operational scheduling with real session durations, energy requests, and parking windows.
+
+Calendar alignment:
+Calendar alignment is acceptable as an operational scenario or stress test, but it should not be described as a direct historical replay. It preserves session constraints and uses forecasts only as scheduling signals, but the paper must clearly state that scheduling was evaluated under a calendar-aligned scenario.
+
+Paper description:
+Describe Step 11/11B as a constrained scheduling case study using one session-supported site under a calendar-aligned operational scenario. Do not claim multi-site session-level scheduling unless additional site-level session data are added.
+
+Coverage summary:
+Raw session sites: 1
+Forecast sites: 6
+Scheduled session-supported sites: 2
+Calendar-aligned sessions available: 18220

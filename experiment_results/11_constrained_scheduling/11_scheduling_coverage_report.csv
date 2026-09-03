@@ -1,0 +1,2 @@
+site_id,sessions_after_cleaning,sessions_directly_overlapping_forecast,session_start,session_end,forecast_start,forecast_end,forecast_hours,fallback_used,scenario_mode
+California_Garage_01,12645,0,2018-04-25 13:45:10+00:00,2018-11-27 01:29:19+00:00,2020-07-15 11:00:00+00:00,2020-12-03 03:00:00+00:00,3377,True,calendar_aligned_forecast_horizon

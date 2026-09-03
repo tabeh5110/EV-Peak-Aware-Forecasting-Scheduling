@@ -1,0 +1,8 @@
+Step 10 leakage safety report
+==============================
+- No forecasting model is retrained.
+- Validation residuals only are used for interval calibration.
+- Test labels are used only for interval evaluation.
+- Actual test peak labels are not used for risk-group interval selection.
+- Risk groups use point forecasts and train-derived site p90/p95 thresholds only.
+- No future information is used.

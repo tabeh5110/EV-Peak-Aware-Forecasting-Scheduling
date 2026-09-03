@@ -1,0 +1,2 @@
+session_id,site_id,arrival_time,departure_time,done_time,energy_kwh,requested_energy_kwh,max_charging_power_kw
+sessionID,siteID,arrival_time,departure_time,done_time,energy_kwh,requested_energy_kwh,

@@ -1,0 +1,16 @@
+{
+    "train_rows": 55814,
+    "validation_rows": 12393,
+    "test_rows": 12395,
+    "total_features": 125,
+    "target": "target_load_kw",
+    "experiments": [
+        "Full_features",
+        "Without_lag_memory",
+        "Without_rolling_memory",
+        "Without_EWM_memory",
+        "Without_peak_risk",
+        "Without_calendar",
+        "Without_interactions"
+    ]
+}

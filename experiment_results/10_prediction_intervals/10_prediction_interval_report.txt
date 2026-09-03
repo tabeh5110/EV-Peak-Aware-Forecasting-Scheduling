@@ -1,0 +1,33 @@
+Step 10 prediction interval report
+==================================
+Purpose: create uncertainty-aware forecasts before constrained EV charging scheduling.
+
+Why intervals are needed:
+Point forecasts can underestimate uncertain EV charging peaks. Upper-bound forecasts give the scheduler a safer load estimate.
+
+Forecast tracks:
+- main_point_forecast_kw: E-AHPA, the statistically supported main forecasting model.
+- peak_sensitive_point_forecast_kw: PRC-E-AHPA, the peak-risk calibrated operational variant.
+
+Calibration:
+All interval methods use validation residuals only. Test labels are used only for final interval evaluation.
+
+Methods tested:
+global_abs, site_abs, asymmetric, risk_asymmetric, site_risk_asymmetric, conservative_upper across 80%, 90%, and 95% nominal coverage.
+
+Selected scheduling interval:
+Forecast track: main_point_forecast_kw.
+Method: site_risk_asymmetric.
+Nominal coverage: 0.9.
+Empirical coverage: 0.8682.
+Average interval width: 19.6965 kW.
+Peak coverage: 0.7829.
+High-peak coverage: 0.7624.
+Upper-bound underestimation rate: 5.1795%.
+Underestimation risk reduction: 13.7233 percentage points.
+
+Limitations:
+Intervals are calibrated from historical validation residuals and assume similar residual behavior in test/future periods. Peak coverage should still be monitored in deployment.
+
+Next step:
+Use data/processed/10_uncertainty_forecasts_for_scheduling.csv in constrained scheduling.
