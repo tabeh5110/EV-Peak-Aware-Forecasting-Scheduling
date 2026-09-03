@@ -86,6 +86,16 @@ Charger power limits
 Site capacity constraints
 Dataset Availability
 
+
+## Reproducibility and Data Availability
+
+Software repository:
+https://doi.org/10.5281/zenodo.22271932
+
+Processed dataset:
+https://doi.org/10.5281/zenodo.22272413
+
+
 The experiments use the publicly available:
 
 Adaptive Charging Network (ACN) Dataset
